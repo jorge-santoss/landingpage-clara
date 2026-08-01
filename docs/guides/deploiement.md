@@ -17,7 +17,7 @@ Dans `public/admin/config.yml`, renseigner le repository :
 ```yaml
 backend:
   name: github
-  repo: GITHUB-TAG/REPO
+  repo: COMPTE-GITHUB/REPO
   branch: main
 ```
 

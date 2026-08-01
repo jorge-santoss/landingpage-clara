@@ -30,7 +30,7 @@ L'OAuth App est ce qui autorise le worker à s'authentifier auprès de GitHub.
 2. Renseigner :
     - **Application name** : un nom parlant (ex. `sveltia-cms-auth`).
     - **Homepage URL** : l'URL du site.
-    - **Authorization callback URL** : `https://sveltia-cms-auth.VOTRE-WORKER.workers.dev/callback` (URL récupérée suite au déploiement du worker avec `/callback` en fin).
+    - **Authorization callback URL** : `https://sveltia-cms-auth.XXXXXXXXXXXX.workers.dev/callback` (URL récupérée suite au déploiement du worker avec `/callback` en fin).
 3. Valider. GitHub affiche un **Client ID**.
 4. `Generate a new client secret` &rarr; copier le **Client Secret** immédiatement (visible une seule fois).
 

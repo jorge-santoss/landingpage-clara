@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: VOTRE-COMPTE/VOTRE-REPO
+  repo: COMPTE-GITHUB/REPO
   branch: main
 
 media_folder: public/images
