@@ -10,4 +10,8 @@ export type SiteContent = {
         subtitle: string;
         ctaLabel: string;
     };
+    problem: {
+        title: string;
+        items: string[];
+    }
 };

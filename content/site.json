@@ -9,5 +9,13 @@
     "title": "Transformez vos visiteur en clients",
     "subtitle": "Une landing page claire, rapide et conforme, conçue pour convertir.",
     "ctaLabel": "Demander un devis"
+  },
+  "problem": {
+    "title": "Votre site ne convertit pas ?",
+    "items": [
+      "Les visiteurs arrivent, puis repartent sans laisser de trace.",
+      "Votre formulaire de contact ne reçoit jamais de message.",
+      "Vous ne savez pas ce qui fonctionne ni quoi améliorer."
+    ]
   }
 }
