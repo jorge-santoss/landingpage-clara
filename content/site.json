@@ -46,6 +46,7 @@
     "intro": "Laissez-nous vos coordonnées, nous revenons vers vous sous 48h.",
     "formEndpoint": ""
   },
+  "analytics": { "gaId": "" },
   "footer": {
     "companyName": "Landing Page Template",
     "email": "contact@example.com",

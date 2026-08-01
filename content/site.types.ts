@@ -33,6 +33,9 @@ export type SiteContent = {
         intro: string;
         formEndpoint: string;
     };
+    analytics: {
+        gaId: string;
+    };
     footer: {
         companyName: string;
         email: string;

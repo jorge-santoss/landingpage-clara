@@ -1,0 +1,12 @@
+.btn {
+    font: inherit;
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--color-text-muted);
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: var(--color-text);
+}
