@@ -1,0 +1,79 @@
+/*#########################################################################
+####################              VARIABLES            ####################
+#########################################################################*/
+
+:root {
+
+    /* -----------                Brand colors                ----------- */
+
+    --color-primary: #1d4ed8;
+    --color-primary-hover: #1e40af;
+    --color-text: #1f2937;
+    --color-text-muted: #57606e;
+    --color-background: #ffffff;
+    --color-surface: #f3f4f6;
+
+    /* -----------                 Typography                 ----------- */
+
+    --font-sans: var(--font-geist-sans), system-ui, sans-serif;
+    --text-base: 1rem;
+    --text-lg: 1.25rem;
+    --text-xl: 1.75rem;
+    --text-2xl: 2.25rem;
+
+    /* -----------               Spacing scale                ----------- */
+
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+    --space-2xl: 4rem;
+}
+
+/*#########################################################################
+####################              NORMALIZE            ####################
+#########################################################################*/
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-sans);
+    color: var(--color-text);
+    background: var(--color-background);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, p, figure, blockquote {
+    margin: 0;
+    padding: 0;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/*#########################################################################
+####################               LAYOUT              ####################
+#########################################################################*/
+
+.container {
+    max-width: 72rem;
+    margin-inline: auto;
+    padding-inline: var(--space-md);
+}
+
+/* -----------               RGAA focus outline              ----------- */
+
+:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 2px;
+}
