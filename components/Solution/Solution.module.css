@@ -1,0 +1,22 @@
+.solution {
+    padding-block: var(--space-xl);
+}
+
+.title {
+    font-size: var(--text-xl);
+    margin-block-end: var(--space-lg);
+}
+
+.items {
+    list-style: none;
+    padding-inline-start: 0;
+    display: grid;
+    gap: var(--space-md);
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.item {
+    border-left: 3px solid var(--color-primary);
+    padding: var(--space-md) var(--space-lg);
+    border-radius: 0.5rem;
+}

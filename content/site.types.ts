@@ -13,5 +13,9 @@ export type SiteContent = {
     problem: {
         title: string;
         items: string[];
+    };
+    solution: {
+        title: string;
+        benefits: string[];
     }
 };
