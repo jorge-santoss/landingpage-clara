@@ -6,7 +6,7 @@
     "description": "Description affichée dans les résultats de recherche."
   },
   "hero": {
-    "title": "Transformez vos visiteur en clients",
+    "title": "Transformez vos visiteurs en clients",
     "subtitle": "Une landing page claire, rapide et conforme, conçue pour convertir.",
     "ctaLabel": "Demander un devis"
   },
@@ -19,18 +19,18 @@
     ]
   },
   "solution": {
-    "title": "Une page pensée pour converti",
+    "title": "Une page pensée pour convertir",
     "benefits": [
-      "Un message clair aui parle à vos clients, sans jargon.",
+      "Un message clair qui parle à vos clients, sans jargon.",
       "Un appel à l'action visible à chaque étape de la lecture.",
-      "Un formulaire simple, connecté à vore outil d'emailing."
+      "Un formulaire simple, connecté à votre outil d'emailing."
     ]
   },
   "socialProof": {
     "title": "Ils nous font confiance",
     "testimonials": [
       {
-        "quote": "En un mois, deux fois plus de demande de devis.",
+        "quote": "En un mois, deux fois plus de demandes de devis.",
         "author":  "Marie Durand",
         "role": "Fleuriste, Aix-en-Provence"
       },
