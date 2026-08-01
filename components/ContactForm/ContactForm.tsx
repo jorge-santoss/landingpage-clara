@@ -3,6 +3,7 @@
 import {useState} from "react";
 import styles from "./ContactForm.module.css";
 import {site} from "@/content/site";
+import {trackEvent} from "@/components/ConsentBanner/track";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -49,6 +50,7 @@ export default function ContactForm() {
 
             if (response.ok) {
                 setStatus("success");
+                trackEvent("generate_lead");
             } else {
                 setStatus("error");
             }
