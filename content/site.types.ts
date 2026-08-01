@@ -28,6 +28,11 @@ export type SiteContent = {
         title: string;
         testimonials: Testimonial[];
     };
+    cta: {
+        title: string;
+        intro: string;
+        formEndpoint: string;
+    };
     footer: {
         companyName: string;
         email: string;
