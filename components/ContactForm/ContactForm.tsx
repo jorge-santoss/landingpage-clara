@@ -2,6 +2,7 @@
 
 import {useState} from "react";
 import styles from "./ContactForm.module.css";
+import {site} from "@/content/site";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -24,14 +25,36 @@ export default function ContactForm() {
         return Object.keys(next).length === 0;
     }
 
-    function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
 
         if (!validate()) return;
+        if (!site.cta.formEndpoint) {
+            setStatus("error");
+            return;
+        }
 
         setStatus("sending");
+        try {
+            const body = new URLSearchParams({
+                NOM: name,
+                EMAIL: email,
+                email_address_check: "",
+            });
 
-        setStatus("success");
+            const response = await fetch(site.cta.formEndpoint, {
+                method: "POST",
+                body,
+            });
+
+            if (response.ok) {
+                setStatus("success");
+            } else {
+                setStatus("error");
+            }
+        } catch {
+            setStatus("error");
+        }
     }
 
     if (status === "success") {
@@ -80,6 +103,17 @@ export default function ContactForm() {
             </div>
             {errors.consent && <span className={styles.error} id="consent-error">{errors.consent}</span>}
 
+            <input
+                className={styles.honeypot}
+                type="text"
+                name="email_address_check"
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+            />
+            {status === "error" && (
+                <p className={styles.error} role="alert">Une erreur est survenue. Veuillez réessayer.</p>
+            )}
             <button className={styles.submit} type="submit" disabled={status === "sending"}>Envoyer</button>
         </form>
     )
