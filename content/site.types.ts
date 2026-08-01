@@ -11,6 +11,14 @@ export type SiteContent = {
         title: string;
         description: string;
     };
+    theme: {
+        primary: string;
+        primaryHover: string;
+        text: string;
+        textMuted: string;
+        background: string;
+        surface: string;
+    };
     hero: {
         title: string;
         subtitle: string;
