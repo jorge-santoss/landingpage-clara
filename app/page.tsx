@@ -6,16 +6,16 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
-  return (
-  <>
-      <Header />
-      <main>
-          <Hero />
-          <Problem />
-          <Solution />
-          <SocialProof />
-      </main>
-      <Footer />
-  </>
-  )
+    return (
+        <>
+            <Header/>
+            <main>
+                <Hero/>
+                <Problem/>
+                <Solution/>
+                <SocialProof/>
+            </main>
+            <Footer/>
+        </>
+    )
 }

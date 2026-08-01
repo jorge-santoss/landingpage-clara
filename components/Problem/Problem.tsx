@@ -1,4 +1,4 @@
-import { site } from "@/content/site";
+import {site} from "@/content/site";
 import styles from "./Problem.module.css";
 
 export default function Problem() {
