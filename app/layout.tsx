@@ -15,6 +15,21 @@ export const metadata: Metadata = {
         template: `%s - ${site.seo.title}`,
     },
     description: site.seo.description,
+    openGraph: {
+        type: "website",
+        locale: "fr_FR",
+        url: "/",
+        title: site.seo.title,
+        description: site.seo.description,
+        images: [
+            {
+                url: "/og.jpg",
+                width: 1200,
+                height: 630,
+                alt: site.seo.title,
+            },
+        ],
+    },
 };
 
 export default function RootLayout({
