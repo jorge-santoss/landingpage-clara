@@ -4,5 +4,10 @@
   "seo": {
     "title": "Titre de la page dans Google",
     "description": "Description affichée dans les résultats de recherche."
+  },
+  "hero": {
+    "title": "Transformez vos visiteur en clients",
+    "subtitle": "Une landing page claire, rapide et conforme, conçue pour convertir.",
+    "ctaLabel": "Demander un devis"
   }
 }

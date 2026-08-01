@@ -5,4 +5,9 @@ export type SiteContent = {
         title: string;
         description: string;
     };
+    hero: {
+        title: string;
+        subtitle: string;
+        ctaLabel: string;
+    };
 };
