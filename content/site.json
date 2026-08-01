@@ -1,0 +1,8 @@
+{
+  "name": "Landing Page Template",
+  "url": "https://example.com",
+  "seo": {
+    "title": "Titre de la page dans Google",
+    "description": "Description affichée dans les résultats de recherche."
+  }
+}
