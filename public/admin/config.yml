@@ -10,6 +10,7 @@ collections:
   - name: content
     label: "Contenu du site"
     files:
+      - { name: logo, label: "Logo (optionnel)", widget: image, required: false }
       - name: theme
         label: "Couleurs"
         widget: object

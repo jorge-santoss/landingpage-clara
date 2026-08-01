@@ -1,6 +1,7 @@
 {
   "name": "Landing Page Template",
   "url": "https://example.com",
+  "logo": "",
   "theme": {
     "primary": "#1d4ed8",
     "primaryHover": "#1e40af",

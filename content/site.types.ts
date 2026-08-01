@@ -7,6 +7,7 @@ export type Testimonial = {
 export type SiteContent = {
     name: string;
     url: string;
+    logo?: string;
     seo: {
         title: string;
         description: string;

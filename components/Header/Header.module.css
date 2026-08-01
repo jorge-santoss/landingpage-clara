@@ -32,3 +32,9 @@
 .links a:hover {
     color: var(--color-primary);
 }
+
+.logo {
+    display: block;
+    width: auto;
+    height: 2.5rem;
+}
