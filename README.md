@@ -1,36 +1,58 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Landing Page Template
 
-## Getting Started
+Template de landing page **Next.js (export statique)** éditable via un CMS Git-based. Base réutilisable pour produire des pages de conversion clients.
 
-First, run the development server:
+Une page, un objectif : transformer un visiteur en contact. Structure de conversion (Hero &rarr; Problème &rarr; Solution &rarr; Preuve sociale &rarr; Contact), formulaire connecté, SEO et accessibilité soignés, contenu éditable par un non-technicien via `/admin`.
+
+---
+
+## Démarrage
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/capaub/Laplateforme_LP.git
+cd Laplateforme_LP
+npm ci          # installe les versions exactes du lockfile
+npm run dev     # développement sur http://localhost:3000
+npm run build   # build de production dans out/
+npx serve out   # prévisualiser l'export localement
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+*Prérequis : Node.js 20+.*
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Mise en service (par client)
 
-## Learn More
+Le template est livré "débranché" : il tourne en local, mais le formulaire, la mesure d'audience et le CMS doivent être connectés pour chaque déploiement client. Les valeurs techniques ne sont pas éditables via le CMS, c'est le développeur qui les renseigne.
 
-To learn more about Next.js, take a look at the following resources:
+| À configurer | Où | Guide |
+|---|---|---|
+| URL de production | `url` dans `content/site.json` | [deploiement.md](docs/guides/deploiement.md) |
+| Formulaire | `cta.formEndpoint` dans `content/site.json` | [brevo.md](docs/guides/brevo.md) |
+| Mesure d'audience | `analytics.gaId` dans `content/site.json` | [analytics.md](docs/guides/analytics.md) |
+| Dépôt du CMS | `repo` dans `public/admin/config.yml` | [deploiement.md](docs/guides/deploiement.md) |
+| Authentification du CMS | `base_url` dans `public/admin/config.yml` | [oauth.md](docs/guides/oauth.md) |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Stack
 
-## Deploy on Vercel
+- **Next.js** (App Router), **export statique** (`output: 'export'`) : aucun serveur en production, hébergement gratuit, réversible.
+- **TypeScript** + **CSS Modules** (pas de framework CSS), mobile-first.
+- **Brevo** pour le formulaire (RGPD, double opt-in), **GA4** avec consentement CNIL.
+- **Sveltia CMS** sur `/admin` (Git-based, authentification GitHub).
+- Déploiement **Cloudflare Pages** (client) ou **GitHub Pages** (entraînement).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Le pourquoi de ces choix est documenté dans [docs/adr/](docs/adr/).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Structure du projet
+
+```
+app/            routes : accueil, layout, pages légales, 404, sitemap, robots
+components/     une section = un dossier (Composant.tsx + Composant.module.css)
+content/        le contenu du site (site.json), son typage et son point d'accès
+public/admin/   configuration du CMS
+docs/           documentation
+```
