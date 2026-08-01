@@ -1,0 +1,81 @@
+backend:
+  name: github
+  repo: VOTRE-COMPTE/VOTRE-REPO
+  branch: main
+
+media_folder: public/images
+public_folder: /images
+
+collections:
+  - name: content
+    label: "Contenu du site"
+    files:
+      - name: landing
+        label: "Landing page"
+        file: content/site.json
+        format: json
+        fields:
+          - { name: name, label: "Nom du site", widget: string }
+
+          - name: seo
+            label: "Référencement (SEO)"
+            widget: object
+            fields:
+              - { name: title, label: "Titre dans Google", widget: string, hint: "50 à 60 caractères" }
+              - { name: description, label: "Description dans Google", widget: text, hint: "150 à 160 caractères" }
+
+          - name: hero
+            label: "Section Hero"
+            widget: object
+            fields:
+              - { name: title, label: "Titre principal", widget: string }
+              - { name: subtitle, label: "Sous-titre", widget: text }
+              - { name: ctaLabel, label: "Texte du bouton", widget: string }
+
+          - name: problem
+            label: "Section Problème"
+            widget: object
+            fields:
+              - { name: title, label: "Titre", widget: string }
+              - name: items
+                label: "Points de douleur"
+                widget: list
+                field: { name: item, label: "Point", widget: string }
+
+          - name: solution
+            label: "Section Solution"
+            widget: object
+            fields:
+              - { name: title, label: "Titre", widget: string }
+              - name: benefits
+                label: "Bénéfices"
+                widget: list
+                field: { name: benefit, label: "Bénéfice", widget: string }
+
+          - name: socialProof
+            label: "Témoignages"
+            widget: object
+            fields:
+              - { name: title, label: "Titre", widget: string }
+              - name: testimonials
+                label: "Témoignages"
+                widget: list
+                fields:
+                  - { name: quote, label: "Citation", widget: text }
+                  - { name: author, label: "Auteur", widget: string }
+                  - { name: role, label: "Activité", widget: string }
+
+          - name: cta
+            label: "Section Contact"
+            widget: object
+            fields:
+              - { name: title, label: "Titre", widget: string }
+              - { name: intro, label: "Texte d'introduction", widget: text }
+
+          - name: footer
+            label: "Pied de page"
+            widget: object
+            fields:
+              - { name: companyName, label: "Nom de l'entreprise", widget: string }
+              - { name: email, label: "Email de contact", widget: string }
+              - { name: phone, label: "Téléphone", widget: string }
