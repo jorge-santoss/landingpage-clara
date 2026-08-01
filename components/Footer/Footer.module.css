@@ -4,7 +4,7 @@
 
 .inner {
     flex-direction: column;
-    max-width: 32rem;
+    max-width: 40rem;
     display: flex;
     align-items: center;
     margin-inline: auto;
@@ -21,6 +21,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     list-style: none;
+    padding-inline-start: 0;
 }
 
 .contacts a {
@@ -37,6 +38,7 @@
     flex-wrap: wrap;
     list-style: none;
     justify-content: space-between;
+    padding-inline-start: 0;
 }
 
 .links a {
