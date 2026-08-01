@@ -10,23 +10,25 @@ collections:
   - name: content
     label: "Contenu du site"
     files:
-      - { name: logo, label: "Logo (optionnel)", widget: image, required: false }
-      - name: theme
-        label: "Couleurs"
-        widget: object
-        fields:
-          - { name: primary, label: "Couleur principale", widget: color }
-          - { name: primaryHover, label: "Principale (survol)", widget: color }
-          - { name: text, label: "Texte", widget: color }
-          - { name: textMuted, label: "Texte atténué", widget: color }
-          - { name: background, label: "Fond", widget: color }
-          - { name: surface, label: "Fond des blocs", widget: color }
       - name: landing
         label: "Landing page"
         file: content/site.json
         format: json
         fields:
           - { name: name, label: "Nom du site", widget: string }
+
+          - { name: logo, label: "Logo (optionnel)", widget: image, required: false }
+
+          - name: theme
+            label: "Couleurs"
+            widget: object
+            fields:
+              - { name: primary, label: "Couleur principale", widget: color }
+              - { name: primaryHover, label: "Principale (survol)", widget: color }
+              - { name: text, label: "Texte", widget: color }
+              - { name: textMuted, label: "Texte atténué", widget: color }
+              - { name: background, label: "Fond", widget: color }
+              - { name: surface, label: "Fond des blocs", widget: color }
 
           - name: seo
             label: "Référencement (SEO)"
