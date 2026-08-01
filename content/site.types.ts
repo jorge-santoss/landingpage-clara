@@ -1,3 +1,9 @@
+export type Testimonial = {
+    quote: string;
+    author: string;
+    role: string;
+}
+
 export type SiteContent = {
     name: string;
     url: string;
@@ -17,5 +23,9 @@ export type SiteContent = {
     solution: {
         title: string;
         benefits: string[];
+    },
+    socialProof: {
+        title: string;
+        testimonials: Testimonial[];
     }
 };

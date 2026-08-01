@@ -25,5 +25,20 @@
       "Un appel à l'action visible à chaque étape de la lecture.",
       "Un formulaire simple, connecté à vore outil d'emailing."
     ]
+  },
+  "socialProof": {
+    "title": "Ils nous font confiance",
+    "testimonials": [
+      {
+        "quote": "En un mois, deux fois plus de demande de devis.",
+        "author":  "Marie Durand",
+        "role": "Fleuriste, Aix-en-Provence"
+      },
+      {
+        "quote": "Enfin un site que je peux modifier moi-même.",
+        "author": "Karim Benali",
+        "role": "Artisan menuisier"
+      }
+    ]
   }
 }
