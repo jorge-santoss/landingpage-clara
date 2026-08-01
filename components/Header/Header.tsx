@@ -9,6 +9,7 @@ export default function Header() {
                 <ul className={styles.links} role="list">
                     <li><a href="#problem">Le problème</a></li>
                     <li><a href="#solution">La solution</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
