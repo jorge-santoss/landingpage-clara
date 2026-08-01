@@ -3,6 +3,7 @@ import Problem from "@/components/Problem/Problem";
 import Solution from "@/components/Solution/Solution";
 import SocialProof from "@/components/SocialProof/SocialProof";
 import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
           <Solution />
           <SocialProof />
       </main>
+      <Footer />
   </>
   )
 }

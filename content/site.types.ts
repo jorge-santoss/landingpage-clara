@@ -23,9 +23,14 @@ export type SiteContent = {
     solution: {
         title: string;
         benefits: string[];
-    },
+    };
     socialProof: {
         title: string;
         testimonials: Testimonial[];
-    }
+    };
+    footer: {
+        companyName: string;
+        email: string;
+        phone: string;
+    };
 };

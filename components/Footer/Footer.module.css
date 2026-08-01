@@ -1,0 +1,44 @@
+.footer {
+    background: var(--color-surface);
+}
+
+.inner {
+    flex-direction: column;
+    max-width: 32rem;
+    display: flex;
+    align-items: center;
+    margin-inline: auto;
+}
+
+.brand {
+    padding-top: var(--space-sm);
+    font-weight: 700;
+}
+
+.contacts {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.contacts a {
+    text-decoration: none;
+    color: var(--color-text-muted);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-between;
+}
+
+.links a {
+    color: var(--color-text-muted);
+}
