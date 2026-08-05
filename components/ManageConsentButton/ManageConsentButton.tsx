@@ -1,8 +1,7 @@
 "use client";
 
 import styles from "./ManageConsentButton.module.css"
-
-const STORAGE_KEY = "consent-analytics";
+import { STORAGE_KEY } from "../ConsentBanner/consent";
 
 export default function ManageConsentButton() {
     function reset() {

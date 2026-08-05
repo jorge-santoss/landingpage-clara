@@ -4,10 +4,10 @@ import {useState, useEffect} from "react";
 import Script from "next/script";
 import {site} from "@/content/site";
 import styles from "./ConsentBanner.module.css"
+import { STORAGE_KEY } from "./consent";
 
 type Consent = "unknown" | "granted" | "denied";
 
-const STORAGE_KEY = "consent-analytics";
 const MAX_AGE_MS = 1000 * 60 * 60 * 24 * 182;
 
 export default function ConsentBanner() {
