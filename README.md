@@ -9,8 +9,8 @@ Une page, un objectif : transformer un visiteur en contact. Structure de convers
 ## Démarrage
 
 ```bash
-git clone https://github.com/capaub/Laplateforme_LP.git
-cd Laplateforme_LP
+git clone https://github.com/aubrycapitone-lab/laplateforme_landing-page.git
+cd laplateforme_landing-page
 npm ci          # installe les versions exactes du lockfile
 npm run dev     # développement sur http://localhost:3000
 npm run build   # build de production dans out/
