@@ -24,12 +24,6 @@
     border-color: #b91c1c;
 }
 
-.consent {
-    display: flex;
-    gap: var(--space-sm);
-    align-items: flex-start;
-}
-
 .consent input {
     margin-block-start: 0.3rem;
 }
@@ -37,10 +31,6 @@
 .error {
     color: #b91c1c;
     font-size: 0.875rem;
-}
-
-.formError {
-    color: #b91c1c;
 }
 
 .success {

@@ -9,7 +9,7 @@
 
 .items {
     list-style: none;
-    padding-inline-start: 0;;
+    padding-inline-start: 0;
     display: grid;
     gap: var(--space-md);
     grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
