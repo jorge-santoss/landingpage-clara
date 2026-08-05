@@ -37,11 +37,9 @@ export default function ContactForm() {
 
         setStatus("sending");
         try {
-            const body = new URLSearchParams({
-                NOM: name,
-                EMAIL: email,
-                email_address_check: "",
-            });
+            const formData = new FormData(e.currentTarget);
+            const body = new URLSearchParams();
+            formData.forEach((value, key) => body.append(key, value.toString()));
 
             const response = await fetch(site.cta.formEndpoint, {
                 method: "POST",
@@ -69,6 +67,7 @@ export default function ContactForm() {
                 <label htmlFor="name">Nom</label>
                 <input
                     id="name"
+                    name="NOM"
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
@@ -81,6 +80,7 @@ export default function ContactForm() {
                 <label htmlFor="email">Email</label>
                 <input
                     id="email"
+                    name="EMAIL"
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
