@@ -20,6 +20,12 @@ export default function ConsentBanner() {
             if (raw) {
                 const saved = JSON.parse(raw) as { value: Consent; at: number };
                 if (Date.now() - saved.at < MAX_AGE_MS) {
+                    /*
+                    Le localStorage n'existe pas au rendu serveur (export statique) : le choix du consentement
+                    est évalué au montage de la bannière. Ce setState initialise l'état avec la valeur enregistrée.
+                    Ici l'avertissement ESLint est un faux positif, neutralisé par le commentaire ci-dessous.
+                     */
+                    // eslint-disable-next-line react-hooks/set-state-in-effect
                     setConsent(saved.value);
                 } else {
                     localStorage.removeItem(STORAGE_KEY);
