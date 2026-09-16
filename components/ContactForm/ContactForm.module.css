@@ -11,6 +11,7 @@
 
 .field label {
     font-weight: 600;
+    color: #844D4D;
 }
 
 .field input {
@@ -49,7 +50,7 @@
 .submit {
     margin-inline: auto;
     justify-self: start;
-    background: var(--color-primary);
+    background: #844D4D;
     color: #fff;
     border: none;
     padding: var(--space-sm) var(--space-lg);
