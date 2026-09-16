@@ -46,6 +46,7 @@ export type SiteContent = {
         title: string;
         intro: string;
         formEndpoint: string;
+        image: string;
     };
     analytics: {
         gaId: string;

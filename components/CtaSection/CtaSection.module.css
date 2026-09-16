@@ -19,6 +19,12 @@
     margin-block-end: var(--space-lg);
 }
 
+.form_text {
+    font-size: var(--text-xl);
+    color: #844D4D;
+    margin-bottom: 2rem;
+}
+
 .icons {
     display: flex;
     flex-direction: row;
