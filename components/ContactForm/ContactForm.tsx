@@ -10,8 +10,11 @@ type Status = "idle" | "sending" | "success" | "error";
 export default function ContactForm() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
+    const [telephone, setTelephone] = useState("");
+    const [message, setMessage] = useState("");
+
     const [consent, setConsent] = useState(false);
-    const [errors, setErrors] = useState<{ name?: string; email?: string; consent?: string; }>({});
+    const [errors, setErrors] = useState<{ name?: string; email?: string; telephone?: string; message?: string; consent?: string; }>({});
     const [status, setStatus] = useState<Status>("idle");
 
     function validate() {
@@ -19,6 +22,8 @@ export default function ContactForm() {
 
         if (!name.trim()) next.name = "Votre nom est requis.";
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) next.email = "Adresse email invalide.";
+        if (!telephone.trim()) next.telephone = "Votre numéro de téléphone est requis.";
+        if (!message.trim()) next.message = "Votre message est requis.";
         if (!consent) next.consent = "Vous devez accepter la politique de confidentialité.";
 
         setErrors(next);
@@ -77,6 +82,19 @@ export default function ContactForm() {
                 {errors.name && <span className={styles.error} id={"name-error"}>{errors.name}</span>}
             </div>
             <div className={styles.field}>
+                <label htmlFor="telephone">Téléphone</label>
+                <input
+                    id="telephone"
+                    name="TELEPHONE"
+                    type="tel"
+                    value={telephone}
+                    onChange={(e) => setTelephone(e.target.value)}
+                    aria-invalid={!!errors.telephone}
+                    aria-describedby={errors.telephone ? "telephone-error" : undefined}
+                />
+                {errors.telephone && <span className={styles.error} id={"telephone-error"}>{errors.telephone}</span>}
+            </div>
+            <div className={styles.field}>
                 <label htmlFor="email">Email</label>
                 <input
                     id="email"
@@ -89,7 +107,19 @@ export default function ContactForm() {
                 />
                 {errors.email && <span className={styles.error} id={"email-error"}>{errors.email}</span>}
             </div>
-            <div>
+            <div className={styles.field}>
+                <label htmlFor="message">Message</label>
+                <textarea
+                    id="message"
+                    name="MESSAGE"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    aria-invalid={!!errors.message}
+                    aria-describedby={errors.message ? "message-error" : undefined}
+                />
+                {errors.message && <span className={styles.error} id={"message-error"}>{errors.message}</span>}
+            </div>
+            <div className={styles.field}>
                 <input
                     id="consent"
                     type="checkbox"
@@ -98,8 +128,7 @@ export default function ContactForm() {
                     aria-invalid={!!errors.consent}
                     aria-describedby={errors.consent ? "consent-error" : undefined}
                 />
-                <label htmlFor="consent">
-                    J'accepte que mes données soient utilisées pour être recontacté, conformément à la{" "}
+                <label htmlFor="consent">J'accepte que mes données soient utilisées pour être recontacté, conformément à la{" "}
                     <a href="/politique-de-confidentialite">politique de confidentialité</a>.
                 </label>
             </div>

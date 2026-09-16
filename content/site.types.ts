@@ -27,11 +27,16 @@ export type SiteContent = {
     };
     problem: {
         title: string;
+        subtitle: string;
+        introduction: string;
+        image: string;
         items: string[];
     };
     solution: {
         title: string;
-        benefits: string[];
+        subtitle: string;
+        introduction: string;
+        categories: string[];
     };
     socialProof: {
         title: string;

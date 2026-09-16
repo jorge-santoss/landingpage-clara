@@ -11,9 +11,11 @@
     --text-lg: 1.25rem;
     --text-xl: 1.75rem;
     --text-2xl: 2.25rem;
+    --text-3xl: 5.75rem;
 
     /* -----------               Spacing scale                ----------- */
 
+    --space-xs: 0.1rem;
     --space-sm: 0.5rem;
     --space-md: 1rem;
     --space-lg: 2rem;
@@ -33,7 +35,7 @@
 
 body {
     margin: 0;
-    font-family: var(--font-sans);
+ font-family: var(--font-momo);
     color: var(--color-text);
     background: var(--color-background);
     line-height: 1.6;
@@ -68,3 +70,5 @@ svg {
     outline: 3px solid var(--color-primary);
     outline-offset: 2px;
 }
+
+

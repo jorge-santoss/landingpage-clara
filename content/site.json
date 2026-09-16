@@ -1,10 +1,10 @@
 {
-  "name": "Landing Page Template",
+  "name": "L'Atelier de Clara",
   "url": "https://example.com",
   "logo": "",
   "theme": {
-    "primary": "#1d4ed8",
-    "primaryHover": "#1e40af",
+    "primary": "#ab7261",
+    "primaryHover": "#B17A7A",
     "text": "#1f2937",
     "textMuted": "#57606e",
     "background": "#ffffff",
@@ -15,38 +15,57 @@
     "description": "Description affichée dans les résultats de recherche."
   },
   "hero": {
-    "title": "Transformez vos visiteurs en clients",
-    "subtitle": "Une landing page claire, rapide et conforme, conçue pour convertir.",
+    "title": "L'Atelier de Clara",
+    "subtitle": "Là où les moments deviennent des œuvres d’art..",
     "ctaLabel": "Demander un devis"
   },
   "problem": {
-    "title": "Votre site ne convertit pas ?",
+    "title": "LES FORMULES",
+    "subtitle": "Une séance pensée pour chaque histoire.",
+    "introduction": "Chaque projet est différent. Je propose plusieurs formules pour répondre à vos envies, avec la possibilité de créer une prestation personnalisée.",
+    "image": "/images/lesformules.png",
     "items": [
-      "Les visiteurs arrivent, puis repartent sans laisser de trace.",
-      "Votre formulaire de contact ne reçoit jamais de message.",
-      "Vous ne savez pas ce qui fonctionne ni quoi améliorer."
+      "PORTRAIT",
+      "COUPLE",
+      "FAMILLE",
+      "ÉVÉNEMENT",
+      "MARIAGE"
     ]
   },
   "solution": {
-    "title": "Une page pensée pour convertir",
-    "benefits": [
-      "Un message clair qui parle à vos clients, sans jargon.",
-      "Un appel à l'action visible à chaque étape de la lecture.",
-      "Un formulaire simple, connecté à votre outil d'emailing."
+    "title": "PORTFOLIO",
+    "subtitle": "MON UNIVERS",
+    "introduction": "Découvrez une sélection de mes dernières séances, entre portraits, couples, familles et événements..",
+    "categories": [
+      "PORTRAIT",
+      "COUPLE",
+      "FAMILLE",
+      "ÉVÉNEMENT",
+      "MARIAGE"
     ]
   },
   "socialProof": {
     "title": "Ils nous font confiance",
     "testimonials": [
       {
-        "quote": "En un mois, deux fois plus de demandes de devis.",
-        "author": "Marie Durand",
+        "quote": "Clara a immédiatement réussi à nous mettre à l’aise. La séance ressemblait plus à une promenade qu’à une séance photo, et le résultat est magnifique.",
+        "author": "Emma & Thomas",
         "role": "Fleuriste, Aix-en-Provence"
       },
       {
-        "quote": "Enfin un site que je peux modifier moi-même.",
-        "author": "Karim Benali",
+        "quote": "Nous voulions des photos de famille naturelles et surtout pas trop posées. Clara a parfaitement compris ce que nous recherchions. Nous adorons les photos !",
+        "author": "Sophie & Julien",
         "role": "Artisan menuisier"
+      },
+      {
+        "quote": "Une très belle expérience du début à la fin. Clara est discrète, professionnelle et sait vraiment capturer les petits moments auxquels on ne pense pas.",
+        "author": "Camille",
+        "role": "Receptionniste, Marseille"
+      },
+      {
+        "quote": "Nous avons fait appel à Clara pour notre soirée et nous avons reçu des photos magnifiques. Elle a réussi à capturer l’ambiance sans jamais être intrusive.",
+        "author": "Laura & Nicolas",
+        "role": "Organisateurs d’événements, Nice"
       }
     ]
   },

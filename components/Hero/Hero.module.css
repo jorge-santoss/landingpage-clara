@@ -1,19 +1,43 @@
-.hero {
+/* .hero {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--space-md);
     padding-block: var(--space-xl);
     text-align: center;
+} */
+
+.hero {
+    background: url("/images/mobile-Hero.jpg") center/cover no-repeat;
+    min-height: 70vh;
+    aspect-ratio: 3/ 4;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: var(--space-md);
+    padding: var(--space-xl) var(--space-xl);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+    gap: var(--space-md);
+    text-align: center;
+    max-width: 40rem;      
 }
 
 .title {
-    font-size: var(--text-2xl);
+    font-family: var(--font-momo);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
     line-height: 1.15;
+    color: #ab7261;
 }
 
 .subtitle {
     font-size: var(--text-lg);
+
     color: var(--color-text-muted);
     max-width: 38rem;
 }
@@ -34,10 +58,8 @@
 
 @media (min-width: 48rem) {
     .hero {
-        padding-block: calc(var(--space-xl) * 2);
+        background: url("/images/Hero.jpg") center/cover no-repeat;
+        aspect-ratio: 16 / 9;
     }
 
-    .title {
-        font-size: 3rem;
-    }
 }
