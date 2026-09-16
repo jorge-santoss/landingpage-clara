@@ -3,13 +3,14 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: var(--space-xl);
-    background-color: pink;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .title {
     font-size: var(--text-xl);
     margin-block-end: var(--space-sm);
-    color: #A67C52;
+    color: #844D4D;
 }
 
 .intro {
@@ -17,3 +18,27 @@
     max-width: 32rem;
     margin-block-end: var(--space-lg);
 }
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 40rem;
+    padding: 1rem;
+}
+
+.icons_svg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.icons_text {
+    display: flex;
+    flex-direction: column;
+}
+
