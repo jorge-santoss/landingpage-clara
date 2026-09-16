@@ -58,7 +58,7 @@
 
 @media (min-width: 48rem) {
     .hero {
-        background: url("/images/Hero.jpg") center/cover no-repeat;
+        background: url("/images/clarahero.png") center/cover no-repeat;
         aspect-ratio: 16 / 9;
     }
 
