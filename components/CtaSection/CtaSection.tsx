@@ -11,7 +11,7 @@ export default function CtaSection() {
             <div className={styles.icons}>
 
                 <div className={styles.icons_svg}>
-                    <svg width="70px" height="70px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#844D4D"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 3.5l.5-.5h13l.5.5v9l-.5.5h-13l-.5-.5v-9zm1 1.035V12h12V4.536L8.31 8.9H7.7L2 4.535zM13.03 4H2.97L8 7.869 13.03 4z"/></svg>
+                    <svg width="70px" height="70px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#844D4D"><path fillRule="evenodd" clipRule="evenodd" d="M1 3.5l.5-.5h13l.5.5v9l-.5.5h-13l-.5-.5v-9zm1 1.035V12h12V4.536L8.31 8.9H7.7L2 4.535zM13.03 4H2.97L8 7.869 13.03 4z"/></svg>
                     <div className={styles.icons_text}><p>+ 123 456 789</p></div>
                 </div>
 
@@ -24,7 +24,7 @@ export default function CtaSection() {
                 
 
                 <div className={styles.icons_svg}>
-                    <svg fill="#844D4D" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="70px" height="70px" viewBox="0 0 28.176 48.261"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M28.175,14.114C28.176,6.318,21.87,0,14.088,0C6.307,0,0,6.318,0,14.114c0,1.971,0.401,3.849,1.13,5.551l0.046,0.103 l0.143,0.314l12.769,28.179l12.77-28.179L27,19.768l0.045-0.103h-0.001C27.773,17.963,28.175,16.085,28.175,14.114z M19.525,19.665 c-1.403,1.381-3.321,2.227-5.438,2.227c-2.116,0-4.034-0.846-5.438-2.227c-1.436-1.411-2.326-3.378-2.326-5.551 c0-4.297,3.475-7.785,7.764-7.785s7.764,3.488,7.764,7.785C21.852,16.287,20.963,18.254,19.525,19.665z"></path> </g></svg>
+                    <svg fill="#844D4D" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="70px" height="70px" viewBox="0 0 28.176 48.261"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M28.175,14.114C28.176,6.318,21.87,0,14.088,0C6.307,0,0,6.318,0,14.114c0,1.971,0.401,3.849,1.13,5.551l0.046,0.103 l0.143,0.314l12.769,28.179l12.77-28.179L27,19.768l0.045-0.103h-0.001C27.773,17.963,28.175,16.085,28.175,14.114z M19.525,19.665 c-1.403,1.381-3.321,2.227-5.438,2.227c-2.116,0-4.034-0.846-5.438-2.227c-1.436-1.411-2.326-3.378-2.326-5.551 c0-4.297,3.475-7.785,7.764-7.785s7.764,3.488,7.764,7.785C21.852,16.287,20.963,18.254,19.525,19.665z"></path> </g></svg>
                     <div className={styles.icons_text}><p>123 Bd Republique,</p>
                     <p> Cannes</p></div>
                 </div>
