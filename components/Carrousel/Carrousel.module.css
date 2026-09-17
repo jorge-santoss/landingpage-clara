@@ -1,3 +1,10 @@
+.title {
+    font-size: var(--text-3xl);
+    margin-block-end: var(--space-sm);
+    color: #844D4D;
+    text-align: center;
+}
+
 .carousel {
   list-style: none;
   padding: 0;

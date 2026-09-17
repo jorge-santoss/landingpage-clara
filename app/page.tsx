@@ -13,9 +13,9 @@ export default function Home() {
             <Header/>
             <main>
                 <Hero/>
-                <Carrousel />
                 <Problem/>
                 <Solution/>
+                <Carrousel />
                 <SocialProof/>
                 <CtaSection/>
             </main>
