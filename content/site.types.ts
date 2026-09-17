@@ -25,6 +25,10 @@ export type SiteContent = {
         subtitle: string;
         ctaLabel: string;
     };
+  caroussel: {
+    title: string;
+    items: { image: string }[];
+};
     problem: {
         title: string;
         subtitle: string;

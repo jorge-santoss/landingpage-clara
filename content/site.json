@@ -19,6 +19,21 @@
     "subtitle": "Là où les moments deviennent des œuvres d’art..",
     "ctaLabel": "Demander un devis"
   },
+ "caroussel": {
+  "title": "Mes Photos",
+  "items": [
+    { "image": "/images/wedding3.png" },
+    { "image": "/images/event1.png" },
+    { "image": "/images/wedding.png" },
+    { "image": "/images/wedding4.png" },
+    { "image": "/images/wedding11.png" },
+    { "image": "/images/landscape.png" },
+    { "image": "/images/wedding13.jpg" },
+    { "image": "/images/wedding7.png" },
+    { "image": "/images/wedding6.png" },
+    { "image": "/images/Wedding5.png" }
+  ]
+},
   "problem": {
     "title": "LES FORMULES",
     "subtitle": "Une séance pensée pour chaque histoire.",
