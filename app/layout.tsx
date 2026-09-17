@@ -23,6 +23,7 @@ const themeVars = {
     "--color-text-muted": site.theme.textMuted,
     "--color-background": site.theme.background,
     "--color-surface": site.theme.surface,
+    "--color-surface2": site.theme.surface2,
 } as React.CSSProperties;
 
 export const metadata: Metadata = {

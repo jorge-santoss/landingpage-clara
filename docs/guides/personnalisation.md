@@ -14,7 +14,7 @@ Le typage (`content/site.types.ts`) garantit qu'un champ manquant ou mal nommé 
 
 ## Adapter le contenu
 
-Dans `content/site.json`, remplacer les textes de chaque section (`hero`, `problem`, `solution`, `socialProof`, `cta`, `footer`) par ceux du client.
+Dans `content/site.json`, remplacer les textes de chaque section (`hero`, `portfolio`, `solution`, `socialProof`, `cta`, `footer`) par ceux du client.
 
 ```json
 "hero": {
@@ -25,7 +25,7 @@ Dans `content/site.json`, remplacer les textes de chaque section (`hero`, `probl
 
 L'ordre des sections (Hero &rarr; Problème &rarr; Solution &rarr; Preuve &rarr; Contact) ne se change pas : c'est la structure de conversion du template. On adapte le contenu, pas l'ordre.
 
-Les listes (`problem.items`, `solution.benefits`, `socialProof.testimonials`) acceptent un nombre variable d'éléments : la mise en page s'adapte automatiquement. En ajouter ou en retirer ne casse rien.
+Les listes (`portfolio.items`, `solution.benefits`, `socialProof.testimonials`) acceptent un nombre variable d'éléments : la mise en page s'adapte automatiquement. En ajouter ou en retirer ne casse rien.
 
 ---
 

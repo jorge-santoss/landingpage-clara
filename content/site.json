@@ -3,12 +3,13 @@
   "url": "https://example.com",
   "logo": "",
   "theme": {
-    "primary": "#ab7261",
-    "primaryHover": "#B17A7A",
-    "text": "#1f2937",
+    "primary": "#4B4038",
+    "primaryHover": "#9A8678",
+    "text": "#4B4038",
     "textMuted": "#57606e",
     "background": "#ffffff",
-    "surface": "#f3f4f6"
+    "surface": "#f3f4f6",
+    "surface2": "#202940"
   },
   "seo": {
     "title": "Titre de la page dans Google",
@@ -19,11 +20,20 @@
     "subtitle": "Là où les moments deviennent des œuvres d’art..",
     "ctaLabel": "Demander un devis"
   },
-  "problem": {
-    "title": "LES FORMULES",
-    "subtitle": "Une séance pensée pour chaque histoire.",
-    "introduction": "Chaque projet est différent. Je propose plusieurs formules pour répondre à vos envies, avec la possibilité de créer une prestation personnalisée.",
-    "image": "/images/lesformules.png",
+
+  "presentation": {
+    "title": "Je photographie les liens, les émotions et les petits instants qui rendent chaque histoire unique. ",
+    "subtitle": "Une séance photo n’a pas besoin d’être posée ou compliquée. J’aime créer des images naturelles, spontanées et intemporelles, où l’on retrouve avant tout des regards, des sourires et des émotions sincères.",
+    "subtitle2": "Que ce soit pour garder un souvenir d’un moment important, partager une séance en famille ou simplement prendre le temps de créer de belles images ensemble, je vous accompagne avec simplicité et bienveillance.",
+    "image": "/images/wedding13.jpg"
+  },
+
+  "portfolio": {
+    "title": "PORTFOLIO",
+    "subtitle": "Bonjour, moi c’est Clara.", 
+    "introduction": "Photographe indépendante basée sur la Côte d’Azur, j’aime capturer ce qui se passe entre deux poses : un rire, un regard, une main qui se cherche ou un moment de complicité. Ma photographie est avant tout humaine.",
+     "introduction2": "Je privilégie la lumière naturelle, les décors qui ont du sens et les moments spontanés afin de créer des images qui restent belles au fil des années. Pendant une séance, mon objectif n’est pas de vous transformer en modèles, mais de vous permettre d’être simplement vous-mêmes.",
+    "image": "/images/clara-portfolio.png",
     "items": [
       "PORTRAIT",
       "COUPLE",
@@ -33,16 +43,41 @@
     ]
   },
   "solution": {
-    "title": "PORTFOLIO",
-    "subtitle": "MON UNIVERS",
-    "introduction": "Découvrez une sélection de mes dernières séances, entre portraits, couples, familles et événements..",
+    "title": "LES FORMULES",
+    "subtitle": "Une séance pensée pour chaque histoire.",
+    "introduction": "Chaque projet est différent. Je propose plusieurs formules pour répondre à vos envies, avec la possibilité de créer une prestation personnalisée.",
     "categories": [
-      "PORTRAIT",
-      "COUPLE",
-      "FAMILLE",
-      "ÉVÉNEMENT",
-      "MARIAGE"
-    ]
+    {
+        "name": "PORTRAIT",
+        "description": "Une séance individuelle pour créer des portraits naturels qui vous ressemblent.",
+        "price": "À partir de 180 €",
+        "ctaLabel": "En savoir plus"
+    },
+    {
+        "name": "COUPLE",
+        "description": "Une séance individuelle pour créer des portraits naturels qui vous ressemblent.",
+        "price": "À partir de 250 €",
+        "ctaLabel": "En savoir plus"
+    },
+    {
+        "name": "FAMILLE",
+        "description": "Une séance individuelle pour créer des portraits naturels qui vous ressemblent.",
+        "price": "À partir de 320 €",
+        "ctaLabel": "En savoir plus"
+    },
+    {
+        "name": "ÉVÉNEMENT",
+        "description": "Anniversaire, baptême, soirée privée ou événement professionnel : je raconte votre événement au fil des moments importants..",
+        "price": "À partir de 450 €",
+        "ctaLabel": "En savoir plus"
+    },
+    {
+        "name": "MARIAGE",
+        "description": "Une journée inoubliable capturée avec authenticité : des préparatifs aux moments forts, je raconte votre histoire avec des images naturelles, élégantes et pleines d’émotion..",
+        "price": "À partir de 1 200 €",
+        "ctaLabel": "En savoir plus"
+    }
+]
   },
   "socialProof": {
     "title": "Ils nous font confiance",

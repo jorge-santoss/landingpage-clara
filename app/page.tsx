@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero/Hero";
-import Problem from "@/components/Problem/Problem";
+import Presentation from "@/components/Presentation/Presentation";
+import Portfolio from "@/components/Portfolio/Portfolio";
 import Solution from "@/components/Solution/Solution";
 import SocialProof from "@/components/SocialProof/SocialProof";
 import Header from "@/components/Header/Header";
@@ -12,7 +13,8 @@ export default function Home() {
             <Header/>
             <main>
                 <Hero/>
-                <Problem/>
+                <Presentation/>
+                <Portfolio/>
                 <Solution/>
                 <SocialProof/>
                 <CtaSection/>

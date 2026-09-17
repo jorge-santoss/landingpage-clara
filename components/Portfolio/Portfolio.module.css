@@ -1,4 +1,4 @@
-.problem {
+.portfolio {
     padding-block: var(--space-xl);
 }
 
@@ -14,7 +14,19 @@
     text-align: center;
 }
 
+.subtitle {
+    font-size: var(--text-2xl);
+    margin-block-end: var(--space-lg);
+    text-align: center;
+}
+
 .introduction {
+    font-size: var(--text-lg);
+    margin-block-end: var(--space-lg);
+    text-align: center;
+}
+
+.introduction2 {
     font-size: var(--text-lg);
     margin-block-end: var(--space-lg);
     text-align: center;

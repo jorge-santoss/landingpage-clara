@@ -35,14 +35,25 @@
 
 body {
     margin: 0;
- font-family: var(--font-momo);
+    font-family: var(--font-sans);
     color: var(--color-text);
     background: var(--color-background);
-    line-height: 1.6;
+    /* line-height: 1.6; */
     -webkit-font-smoothing: antialiased;
+    background: var(--color-cardBackground);
 }
 
-h1, h2, h3, p, figure, blockquote {
+h1, h2, h3 {
+    font-family: var(--font-momo);
+    font-weight: 400;   /* Momo is a single-weight font (400) */
+}
+
+h1,
+h2,
+h3,
+p,
+figure,
+blockquote {
     margin: 0;
     padding: 0;
 }
@@ -70,5 +81,3 @@ svg {
     outline: 3px solid var(--color-primary);
     outline-offset: 2px;
 }
-
-

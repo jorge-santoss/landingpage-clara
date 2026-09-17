@@ -1,0 +1,39 @@
+.presentation {
+    padding-block: var(--space-xl);
+}
+
+.title {
+    font-size: var(--text-2xl);
+    margin: 0 auto var(--space-lg);
+    margin-inline: var(--space-xl);
+    text-align: center;
+}
+
+.subtitle {
+    font-size: var(--text-md);
+    margin-block-end: var(--space-lg);
+    margin-inline: var(--space-xl);
+    text-align: center;
+}
+
+.subtitle2 {
+    font-size: var(--text-md);
+    margin-block-end: var(--space-lg);
+margin-inline: var(--space-xl);
+    text-align: center;
+}
+
+.introduction {
+    font-size: var(--text-md);
+    margin-block-end: var(--space-lg);
+    margin-inline: var(--space-xl);
+    text-align: center;
+}
+
+.photo {
+    border-radius: 1rem;        /* ← rounded corners */
+    width: 100%;                /* fills its container */
+    height: auto;               /* keeps aspect ratio */
+    display: block;             /* removes inline gap under the image */
+    object-fit: cover;
+}

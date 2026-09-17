@@ -8,8 +8,15 @@ export default function SocialProof() {
             <div className={styles.items}>
                 {site.socialProof.testimonials.map((testimonials) => (
                     <figure className={styles.card} key={testimonials.author}>
+                        <div className={styles.header}>
+                            <div className={styles.avatar}>{testimonials.author.charAt(0)}</div>
+                            <div>
+                                <div className={styles.name}>{testimonials.author}</div>
+                                <div className={styles.role}>{testimonials.role}</div>
+                            </div>
+                        </div>
                         <blockquote className={styles.quote}><p>{testimonials.quote}</p></blockquote>
-                        <figcaption className={styles.caption}>{testimonials.author} - {testimonials.role}</figcaption>
+                        {/* <figcaption className={styles.caption}>{testimonials.author} - {testimonials.role}</figcaption> */}
                     </figure>
                 ))}
             </div>

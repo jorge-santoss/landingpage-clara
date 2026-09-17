@@ -4,6 +4,13 @@ export type Testimonial = {
     role: string;
 }
 
+export type SolutionItem = {
+    name: string;
+    description: string;
+    price: string;
+    ctaLabel: string;
+};
+
 export type SiteContent = {
     name: string;
     url: string;
@@ -19,25 +26,38 @@ export type SiteContent = {
         textMuted: string;
         background: string;
         surface: string;
+        surface2: string;
     };
     hero: {
         title: string;
         subtitle: string;
         ctaLabel: string;
     };
-    problem: {
+
+    presentation: {
+        title: string;
+        subtitle: string;
+        subtitle2: string;
+        image: string;
+    };
+
+    portfolio: {
         title: string;
         subtitle: string;
         introduction: string;
+        introduction2: string;
         image: string;
         items: string[];
     };
-    solution: {
+
+    
+   solution: {
         title: string;
         subtitle: string;
         introduction: string;
-        categories: string[];
+        categories: SolutionItem[];
     };
+
     socialProof: {
         title: string;
         testimonials: Testimonial[];

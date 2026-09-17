@@ -29,6 +29,7 @@ collections:
               - { name: textMuted, label: "Texte atténué", widget: color }
               - { name: background, label: "Fond", widget: color }
               - { name: surface, label: "Fond des blocs", widget: color }
+              - { name: surface2, label: "Fond des blocs 2", widget: color }
 
           - name: seo
             label: "Référencement (SEO)"
@@ -45,8 +46,8 @@ collections:
               - { name: subtitle, label: "Sous-titre", widget: text }
               - { name: ctaLabel, label: "Texte du bouton", widget: string }
 
-          - name: problem
-            label: "Section Problème"
+          - name: portfolio
+            label: "Section Portfolio"
             widget: object
             fields:
               - { name: title, label: "Titre", widget: string }

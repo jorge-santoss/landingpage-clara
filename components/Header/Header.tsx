@@ -14,7 +14,7 @@ export default function Header() {
                     )}
                 </a>
                 <ul className={styles.links} role="list">
-                    <li><a href="#problem">Portfolio</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#solution">Les formules</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
