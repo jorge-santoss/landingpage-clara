@@ -18,10 +18,13 @@
   "hero": {
     "title": "L'Atelier de Clara",
     "subtitle": "Là où les moments deviennent des œuvres d’art..",
-    "ctaLabel": "Demander un devis"
+    "ctaLabel": "Demander un devis",
+    "ctaLabel2": "Découvrir mon portfolio"
   },
   "caroussel": {
-    "title": "Mes Photos",
+    "title": "L’UNIVERS DE CLARA",
+    "subtitle": "Des instants, des émotions, des histoires.",
+    "introduction": "Une sélection d’images capturées au fil des séances, entre lumière naturelle, moments spontanés et émotions sincères.",
     "items": [
       { "image": "/images/wedding3.png" },
       { "image": "/images/event1.png" },

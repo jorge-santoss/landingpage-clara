@@ -1,7 +1,21 @@
 .title {
     font-size: var(--text-3xl);
     margin-block-end: var(--space-sm);
-    color: #844D4D;
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.subtitle {
+    font-size: var(--text-lg);
+    margin-block-end: var(--space-md);
+    color: var(--color-text);
+    text-align: center;
+}
+
+.introduction {
+    font-size: var(--text-md);
+    margin-block-end: var(--space-lg);
+    color: var(--color-text);
     text-align: center;
 }
 

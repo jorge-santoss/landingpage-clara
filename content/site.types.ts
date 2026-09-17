@@ -33,10 +33,14 @@ export type SiteContent = {
         title: string;
         subtitle: string;
         ctaLabel: string;
+        ctaLabel2: string;
     };
     caroussel: {
         title: string;
+        subtitle: string;
+        introduction: string;
         items: { image: string }[];
+
     };
 
     presentation: {

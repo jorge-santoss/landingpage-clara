@@ -8,9 +8,9 @@
 }
 
 .title {
-    font-size: var(--text-xl);
+    font-size: var(--text-3xl);
     margin-block-end: var(--space-sm);
-    color: #844D4D;
+    color: var(--color-primary);
 }
 
 .intro {
@@ -21,7 +21,7 @@
 
 .form_text {
     font-size: var(--text-xl);
-    color: #844D4D;
+    color: var(--color-primary);
     margin-bottom: 2rem;
 }
 

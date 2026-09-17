@@ -3,7 +3,7 @@
 }
 
 .title {
-    font-size: var(--text-xl);
+    font-size: var(--text-3xl);
     margin-block-end: var(--space-lg);
     text-align: center;
 }

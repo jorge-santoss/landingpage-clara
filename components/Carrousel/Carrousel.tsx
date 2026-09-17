@@ -36,6 +36,8 @@ export default function Carrousel() {
             <h2 id="carrousel-title" className={styles.title}>
                 {site.caroussel.title}
             </h2>
+            <p className={styles.subtitle}>{site.caroussel.subtitle}</p>
+            <p className={styles.introduction}>{site.caroussel.introduction}</p>
 
             <ul ref={scrollerRef} className={`${styles.carousel} ${styles.cards} ${styles.itemized}`} role="list">
                 {site.caroussel.items.map((item, index) => (

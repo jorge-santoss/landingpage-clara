@@ -8,7 +8,10 @@ export default function Hero() {
     <div className={styles.content}>
         <h1 className={styles.title} id="hero-title">{site.hero.title}</h1>
         <p className={styles.subtitle}>{site.hero.subtitle}</p>
-        <a className={styles.cta} href="#contact">{site.hero.ctaLabel}</a>
+        <div className={styles.buttons}>
+    <a className={styles.cta} href="#contact">{site.hero.ctaLabel}</a>
+    <a className={styles.ctaSecondary} href="#portfolio">{site.hero.ctaLabel2}</a>
+</div>
     </div>
 </section>
     );
