@@ -50,32 +50,69 @@
     {
         "name": "PORTRAIT",
         "description": "Une séance individuelle pour créer des portraits naturels qui vous ressemblent.",
+        "inclus": [
+            "1 heure de séance",
+            "1 lieu au choix",
+            "Conseils avant et pendant la séance",
+            "20 photos retouchées en haute définition",
+            "Galerie privée en ligne"
+        ],
         "price": "À partir de 180 €",
-        "ctaLabel": "En savoir plus"
+        "ctaLabel": "Demander un devis"
     },
     {
         "name": "COUPLE",
         "description": "Une séance individuelle pour créer des portraits naturels qui vous ressemblent.",
+        "inclus": [
+            "1h30 de séance",
+            "En extérieur ou sur le lieu de votre choix",
+            "Accompagnement personnalisé",
+            "20 photos retouchées en haute définition",
+            "Galerie privée en ligne"
+        ],
         "price": "À partir de 250 €",
-        "ctaLabel": "En savoir plus"
+        "ctaLabel": "Demander un devis"
     },
     {
         "name": "FAMILLE",
         "description": "Une séance individuelle pour créer des portraits naturels qui vous ressemblent.",
+        "inclus": [
+            "2 heures de séance",
+            "Jusqu'à 6 personnes",
+            "Conseils pour préparer la séance",
+            "20 photos retouchées en haute définition",
+            "Galerie privée en ligne"
+        ],
         "price": "À partir de 320 €",
-        "ctaLabel": "En savoir plus"
+        "ctaLabel": "Demander un devis"
     },
     {
         "name": "ÉVÉNEMENT",
         "description": "Anniversaire, baptême, soirée privée ou événement professionnel : je raconte votre événement au fil des moments importants..",
+         "inclus": [
+            "À partir de 2 heures de présencee",
+            "Photographies prises sur le vif",
+            "Sélection et retouche des images",
+            "Galerie privée en ligne",
+            "Photos en haute définition"
+        ],
         "price": "À partir de 450 €",
-        "ctaLabel": "En savoir plus"
+        "ctaLabel": "Demander un devis"
     },
     {
         "name": "MARIAGE",
         "description": "Une journée inoubliable capturée avec authenticité : des préparatifs aux moments forts, je raconte votre histoire avec des images naturelles, élégantes et pleines d’émotion..",
+        "inclus": [
+            "À partir de 6 heures de présencee",
+            "Reportage complet : préparatifs, cérémonie, couple, invités, détails",
+            "Accompagnement avant le jour J (planning, conseils, repérage)",
+            "Sélection et retouche professionnelle des images",
+            "Galerie privée en ligne",
+            "Photos en haute définition",
+            "Option album disponible"
+        ],
         "price": "À partir de 1 200 €",
-        "ctaLabel": "En savoir plus"
+        "ctaLabel": "Demander un devis"
     }
 ]
   },

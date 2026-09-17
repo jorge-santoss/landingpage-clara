@@ -7,6 +7,7 @@ export type Testimonial = {
 export type SolutionItem = {
     name: string;
     description: string;
+    inclus: string[];
     price: string;
     ctaLabel: string;
 };

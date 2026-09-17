@@ -12,6 +12,11 @@ export default function Solution() {
                     <li className={styles.item} key={item.name}>
                     <h3 className={styles.itemTitle}>{item.name}</h3>
                     <p className={styles.itemDescription}>{item.description}</p>
+                    <ul className={styles.inclus}>
+    {item.inclus.map((item) => (
+        <li key={item}>{item}</li>
+    ))}
+</ul>
                     <p className={styles.itemPrice}>{item.price}</p>
                     < a href="#cta" className={styles.itemButton}>{item.ctaLabel}</a>
                         </li>

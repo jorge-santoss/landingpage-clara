@@ -21,13 +21,12 @@
 }
 
 
-
 .items {
     list-style: none;
     padding-inline-start: 0;
     display: grid;
     gap: var(--space-md);
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     align-items: stretch;
 }
 
@@ -80,4 +79,25 @@ gap: var(--space-md);
 
 .itemButton:hover {
     background: var(--color-primary-hover);
+}
+
+.inclus {
+    list-style: none;
+    padding: 0;
+    margin: var(--space-md) 0;
+    text-align: left;
+    color: var(--color-text-muted);
+    font-size: var(--text-base);
+    flex-grow: 1;
+}
+
+.inclus li {
+    padding: var(--space-xs) 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.inclus li::before {
+    content: "✓ ";
+    color: var(--color-primary);
+    font-weight: 600;
 }

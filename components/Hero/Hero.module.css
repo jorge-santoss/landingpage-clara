@@ -8,7 +8,7 @@
 } */
 
 .hero {
-    background: url("/images/clarahero-mobile.png") center/cover no-repeat;
+    background: url("/images/clara-heromobile.png") center/cover no-repeat;
     min-height: 70vh;
     aspect-ratio: 3/ 4;
     display: flex;
@@ -16,7 +16,7 @@
     align-items: flex-end;
     justify-content: center;
     gap: var(--space-md);
-    padding: var(--space-xl) var(--space-xl);
+    /* padding: var(--space-xl) var(--space-xl); */
 }
 
 .content {
@@ -29,7 +29,7 @@
 }
 
 .title {
-     font-size: clamp(3.5rem, 7vw, 6.5rem);
+     font-size: clamp(2.5rem, 7vw, 6.5rem);
     line-height: 1.15;
     color: var(--color-primary);
     /* letter-spacing: -0.02em; */
@@ -58,7 +58,7 @@
 
 @media (min-width: 48rem) {
     .hero {
-        background: url("/images/clarahero.png") center/cover no-repeat;
+        background: url("/images/clara-heropage.png") center/cover no-repeat;
         aspect-ratio: 16 / 9;
     }
 
