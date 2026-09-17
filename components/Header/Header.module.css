@@ -13,8 +13,8 @@
     align-items: center;
     justify-content: space-between;
     gap: var(--space-sm) var(--space-md);
-    background: rgba(255, 255, 255, 0.4);
-    backdrop-filter: blur(12px);
+    background: var(--color-primary);
+    /* backdrop-filter: blur(12px); */
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     border-radius: 5rem;
@@ -25,7 +25,7 @@
 
 .brand {
     font-weight: 700;
-    color: var(--color-text);
+    color: var(--color-background);
     text-decoration: none;
 }
 
@@ -38,12 +38,17 @@
 }
 
 .links a {
-    color: var(--color-text);
+    color: var(--color-background);  
     text-decoration: none;
+    padding: var(--space-xs) var(--space-md);  
+    border-radius: 5rem;             
+    transition: background 0.3s ease-in-out;
 }
 
 .links a:hover {
-    color: var(--color-primary);
+     background: var(--color-background);  
+    color: var(--color-primary); 
+    font-weight: 600;   
 }
 
 .logo {

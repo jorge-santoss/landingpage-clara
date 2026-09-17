@@ -3,7 +3,7 @@ import styles from "./Solution.module.css";
 
 export default function Solution() {
     return (
-        <section className={`${styles.solution} container`} id="solution" aria-labelledby="solution-title">
+        <section className={`${styles.solution} container container--wide`} id="solution" aria-labelledby="solution-title">
             <h2 className={styles.title} id="solution-title">{site.solution.title}</h2>
             <p className={styles.subtitle}>{site.solution.subtitle}</p>
             <p className={styles.introduction}>{site.solution.introduction}</p>

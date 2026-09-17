@@ -75,6 +75,14 @@ svg {
     padding-inline: var(--space-md);
 }
 
+.container--narrow {
+    max-width: 65rem;
+}
+
+.container--wide {
+    max-width: 80rem;
+}
+
 /* -----------               RGAA focus outline              ----------- */
 
 :focus-visible {

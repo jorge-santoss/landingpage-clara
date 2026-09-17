@@ -3,7 +3,7 @@ import styles from "./Portfolio.module.css";
 
 export default function Portfolio() {
     return (
-        <section className={`${styles.portfolio} container`} id="portfolio" aria-labelledby="portfolio-title">
+        <section className={`${styles.portfolio} container container--narrow`} id="portfolio" aria-labelledby="portfolio-title">
             <h2 className={styles.title} id="portfolio-title">{site.portfolio.title}</h2>
             <p className={styles.subtitle}>{site.portfolio.subtitle}</p>
             <p className={styles.introduction}>{site.portfolio.introduction}</p>
