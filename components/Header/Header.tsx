@@ -5,7 +5,7 @@ import styles from "./Header.module.css";
 export default function Header() {
     return (
         <header className={styles.header}>
-            <nav className={`${styles.nav} container container--narrow`} aria-label="Navigation principale">
+            <nav className={`${styles.nav} container`} aria-label="Navigation principale">
                 <a className={styles.brand} href="#hero">
                     {site.logo ? (
                         <Image className={styles.logo} src={site.logo} alt={site.name} width={140} height={40} />
