@@ -67,85 +67,90 @@ export default function ContactForm() {
     }
 
     return (
-        <form className={styles.form} onSubmit={handleSubmit} noValidate>
-            <div className={styles.field}>
-                <label htmlFor="name">Nom</label>
-                <input
-                    id="name"
-                    name="NOM"
-                    type="text"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    aria-invalid={!!errors.name}
-                    aria-describedby={errors.name ? "name-error" : undefined}
-                />
-                {errors.name && <span className={styles.error} id={"name-error"}>{errors.name}</span>}
-            </div>
-            <div className={styles.field}>
-                <label htmlFor="telephone">Téléphone</label>
-                <input
-                    id="telephone"
-                    name="TELEPHONE"
-                    type="tel"
-                    value={telephone}
-                    onChange={(e) => setTelephone(e.target.value)}
-                    aria-invalid={!!errors.telephone}
-                    aria-describedby={errors.telephone ? "telephone-error" : undefined}
-                />
-                {errors.telephone && <span className={styles.error} id={"telephone-error"}>{errors.telephone}</span>}
-            </div>
-            <div className={styles.field}>
-                <label htmlFor="email">Email</label>
-                <input
-                    id="email"
-                    name="EMAIL"
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    aria-invalid={!!errors.email}
-                    aria-describedby={errors.email ? "email-error" : undefined}
-                />
-                {errors.email && <span className={styles.error} id={"email-error"}>{errors.email}</span>}
-            </div>
-            <div className={styles.field}>
-                <label htmlFor="message">Message</label>
-                <textarea
-                    id="message"
-                    name="MESSAGE"
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
-                    aria-invalid={!!errors.message}
-                    aria-describedby={errors.message ? "message-error" : undefined}
-                />
-                {errors.message && <span className={styles.error} id={"message-error"}>{errors.message}</span>}
-            </div>
-            <div className={styles.field}>
-                <input
-                    id="consent"
-                    type="checkbox"
-                    checked={consent}
-                    onChange={(e) => setConsent(e.target.checked)}
-                    aria-invalid={!!errors.consent}
-                    aria-describedby={errors.consent ? "consent-error" : undefined}
-                />
-                <label htmlFor="consent">J'accepte que mes données soient utilisées pour être recontacté, conformément à la{" "}
-                    <a href="/politique-de-confidentialite">politique de confidentialité</a>.
-                </label>
-            </div>
-            {errors.consent && <span className={styles.error} id="consent-error">{errors.consent}</span>}
+        <>
+        <div className={styles.globalForm}>
+            <img src={site.cta.image} alt={site.cta.title} className={styles.formImage} />
+            <form className={styles.form} onSubmit={handleSubmit} noValidate>
+                <div className={styles.field}>
+                    <label htmlFor="name">Nom</label>
+                    <input
+                        id="name"
+                        name="NOM"
+                        type="text"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        aria-invalid={!!errors.name}
+                        aria-describedby={errors.name ? "name-error" : undefined}
+                    />
+                    {errors.name && <span className={styles.error} id={"name-error"}>{errors.name}</span>}
+                </div>
+                <div className={styles.field}>
+                    <label htmlFor="telephone">Téléphone</label>
+                    <input
+                        id="telephone"
+                        name="TELEPHONE"
+                        type="tel"
+                        value={telephone}
+                        onChange={(e) => setTelephone(e.target.value)}
+                        aria-invalid={!!errors.telephone}
+                        aria-describedby={errors.telephone ? "telephone-error" : undefined}
+                    />
+                    {errors.telephone && <span className={styles.error} id={"telephone-error"}>{errors.telephone}</span>}
+                </div>
+                <div className={styles.field}>
+                    <label htmlFor="email">Email</label>
+                    <input
+                        id="email"
+                        name="EMAIL"
+                        type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        aria-invalid={!!errors.email}
+                        aria-describedby={errors.email ? "email-error" : undefined}
+                    />
+                    {errors.email && <span className={styles.error} id={"email-error"}>{errors.email}</span>}
+                </div>
+                <div className={styles.field}>
+                    <label htmlFor="message">Message</label>
+                    <textarea
+                        id="message"
+                        name="MESSAGE"
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        aria-invalid={!!errors.message}
+                        aria-describedby={errors.message ? "message-error" : undefined}
+                    />
+                    {errors.message && <span className={styles.error} id={"message-error"}>{errors.message}</span>}
+                </div>
+                <div className={styles.consent}>
+                    <input
+                        id="consent"
+                        type="checkbox"
+                        checked={consent}
+                        onChange={(e) => setConsent(e.target.checked)}
+                        aria-invalid={!!errors.consent}
+                        aria-describedby={errors.consent ? "consent-error" : undefined}
+                    />
+                    <label htmlFor="consent">J'accepte que mes données soient utilisées pour être recontacté, conformément à la{" "}
+                        <a href="/politique-de-confidentialite">politique de confidentialité</a>.
+                    </label>
+                </div>
+                {errors.consent && <span className={styles.error} id="consent-error">{errors.consent}</span>}
 
-            <input
-                className={styles.honeypot}
-                type="text"
-                name="email_address_check"
-                tabIndex={-1}
-                autoComplete="off"
-                aria-hidden="true"
-            />
-            {status === "error" && (
-                <p className={styles.error} role="alert">Une erreur est survenue. Veuillez réessayer.</p>
-            )}
-            <button className={styles.submit} type="submit" disabled={status === "sending"}>Envoyer</button>
-        </form>
+                <input
+                    className={styles.honeypot}
+                    type="text"
+                    name="email_address_check"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                />
+                {status === "error" && (
+                    <p className={styles.error} role="alert">Une erreur est survenue. Veuillez réessayer.</p>
+                )}
+                <button className={styles.submit} type="submit" disabled={status === "sending"}>Envoyer</button>
+            </form>
+        </div>
+        </>
     )
 }

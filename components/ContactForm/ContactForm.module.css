@@ -1,3 +1,8 @@
+.globalForm {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
 .form {
     display: grid;
     gap: var(--space-md);
@@ -11,6 +16,7 @@
 
 .field label {
     font-weight: 600;
+    color: #844D4D;
 }
 
 .field input {
@@ -49,7 +55,7 @@
 .submit {
     margin-inline: auto;
     justify-self: start;
-    background: var(--color-primary);
+    background: #844D4D;
     color: #fff;
     border: none;
     padding: var(--space-sm) var(--space-lg);
@@ -57,6 +63,7 @@
     font: inherit;
     font-weight: 600;
     cursor: pointer;
+    width: 35vw;
 }
 
 .submit:hover {
@@ -73,4 +80,10 @@
     left: -9999px;
     width: 1px;
     height: 1px;
+}
+
+.formImage {
+    border-radius: 8px;
+    height: 600px;
+    margin-right: 100px;
 }
