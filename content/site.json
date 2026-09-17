@@ -20,19 +20,34 @@
     "subtitle": "Là où les moments deviennent des œuvres d’art..",
     "ctaLabel": "Demander un devis"
   },
+  "caroussel": {
+    "title": "Mes Photos",
+    "items": [
+      { "image": "/images/wedding3.png" },
+      { "image": "/images/event1.png" },
+      { "image": "/images/wedding.png" },
+      { "image": "/images/wedding4.png" },
+      { "image": "/images/wedding11.png" },
+      { "image": "/images/landscape.png" },
+      { "image": "/images/wedding13.jpg" },
+      { "image": "/images/wedding7.png" },
+      { "image": "/images/wedding6.png" },
+      { "image": "/images/Wedding5.png" }
+    ]
+  },
 
   "presentation": {
     "title": "Je photographie les liens, les émotions et les petits instants qui rendent chaque histoire unique. ",
-    "subtitle": "Une séance photo n’a pas besoin d’être posée ou compliquée. J’aime créer des images naturelles, spontanées et intemporelles, où l’on retrouve avant tout des regards, des sourires et des émotions sincères.",
-    "subtitle2": "Que ce soit pour garder un souvenir d’un moment important, partager une séance en famille ou simplement prendre le temps de créer de belles images ensemble, je vous accompagne avec simplicité et bienveillance.",
+    "subtitle": "Une séance photo n'a pas besoin d'être posée ou compliquée. J'aime créer des images naturelles, spontanées et intemporelles, où l'on retrouve avant tout des regards, des sourires et des émotions sincères.",
+    "subtitle2": "Que ce soit pour garder un souvenir d'un moment important, partager une séance en famille ou simplement prendre le temps de créer de belles images ensemble, je vous accompagne avec simplicité et bienveillance.",
     "image": "/images/wedding13.jpg"
   },
 
   "portfolio": {
     "title": "PORTFOLIO",
-    "subtitle": "Bonjour, moi c’est Clara.", 
-    "introduction": "Photographe indépendante basée sur la Côte d’Azur, j’aime capturer ce qui se passe entre deux poses : un rire, un regard, une main qui se cherche ou un moment de complicité. Ma photographie est avant tout humaine.",
-     "introduction2": "Je privilégie la lumière naturelle, les décors qui ont du sens et les moments spontanés afin de créer des images qui restent belles au fil des années. Pendant une séance, mon objectif n’est pas de vous transformer en modèles, mais de vous permettre d’être simplement vous-mêmes.",
+    "subtitle": "Bonjour, moi c'est Clara.", 
+    "introduction": "Photographe indépendante basée sur la Côte d'Azur, j'aime capturer ce qui se passe entre deux poses : un rire, un regard, une main qui se cherche ou un moment de complicité. Ma photographie est avant tout humaine.",
+     "introduction2": "Je privilégie la lumière naturelle, les décors qui ont du sens et les moments spontanés afin de créer des images qui restent belles au fil des années. Pendant une séance, mon objectif n'est pas de vous transformer en modèles, mais de vous permettre d'être simplement vous-mêmes.",
     "image": "/images/clara-portfolio.png",
     "items": [
       "PORTRAIT",
@@ -143,14 +158,15 @@
   },
   
   "cta": {
-    "title": "Parlons de votre projet",
+    "title": "Parlez‑nous de votre projet",
     "intro": "Laissez-nous vos coordonnées, nous revenons vers vous sous 48h.",
-    "formEndpoint": ""
+    "formEndpoint": "",
+    "image" : "/images/claraportrait.png"
   },
   "analytics": { "gaId": "" },
   "footer": {
-    "companyName": "Landing Page Template",
-    "email": "contact@example.com",
-    "phone": "01.23.45.67.89"
+    "companyName": "L'ATELIER DE CLARA",
+    "email": "contact@latelierdeclara.com",
+    "phone": "+33 06 12 34 56 78"
   }
 }

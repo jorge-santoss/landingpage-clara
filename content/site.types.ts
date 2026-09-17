@@ -34,6 +34,10 @@ export type SiteContent = {
         subtitle: string;
         ctaLabel: string;
     };
+    caroussel: {
+        title: string;
+        items: { image: string }[];
+    };
 
     presentation: {
         title: string;
@@ -67,6 +71,7 @@ export type SiteContent = {
         title: string;
         intro: string;
         formEndpoint: string;
+        image: string;
     };
     analytics: {
         gaId: string;

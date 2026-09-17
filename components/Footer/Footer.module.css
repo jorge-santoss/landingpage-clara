@@ -1,5 +1,5 @@
 .footer {
-    background: var(--color-surface);
+    background: #eed3c8;
 }
 
 .inner {
@@ -13,20 +13,22 @@
 .brand {
     padding-top: var(--space-sm);
     font-weight: 700;
+    color: var(--color-primary);
 }
 
 .contacts {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 1.5rem;
     list-style: none;
     padding-inline-start: 0;
 }
 
 .contacts a {
     text-decoration: none;
-    color: var(--color-text-muted);
+    color: var(--color-primary);
     font: inherit;
     font-weight: 600;
     cursor: pointer;
@@ -42,5 +44,5 @@
 }
 
 .links a {
-    color: var(--color-text-muted);
+   color: var(--color-primary);
 }
