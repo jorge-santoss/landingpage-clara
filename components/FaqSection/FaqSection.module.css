@@ -26,17 +26,17 @@
  font-size: var(--text-md);
     margin-block-end: var(--space-md);
     background-color: var(--color-surface);
-    padding: var(--space-md) var(--space-lg);
+    padding: var(--space-sm) var(--space-lg);
     border-radius: 1rem;
 }
 
 .h3 {
-    font-size: var(--text-md);
+    font-size: var(--text-sm);
     margin: 0;
 }
 
 .p {
-    font-size: var(--text-base);
+    font-size: var(--text-sm);
    
 }
 
@@ -64,5 +64,31 @@
 }
 
 .item[open] .p {
-    margin-top: var(--space-md);    
+    margin-top: var(--space-xs);    
 }
+
+
+/* Phones (≤ 768px) */
+@media (max-width: 48rem) {
+    .faqSection {
+        padding-block: var(--space-lg);        /* less vertical air */
+    }
+
+    .title {
+        font-size: var(--text-2xl);            /* 4rem → 2.25rem */
+        margin-block-end: var(--space-md);
+    }
+
+    .subtitle {
+        font-size: var(--text-base);           /* 1.25rem → 1rem */
+    }
+
+    .item {
+        padding: var(--space-sm) var(--space-md);  /* sides 2rem → 1rem */
+    }
+
+    .h3 {
+        font-size: var(--text-xs);           /* 1.125rem → 1rem */
+    }
+}
+

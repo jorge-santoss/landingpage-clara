@@ -1,7 +1,8 @@
 {
   "name": "L'Atelier de Clara",
   "url": "https://example.com",
-  "logo": "",
+  "logo": "/images/logo-white.png",
+  "logoDark": "/images/logo-dark.png",
   "theme": {
     "primary": "#4B4038",
     "primaryHover": "#9A8678",

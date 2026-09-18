@@ -8,6 +8,7 @@
 
     --font-sans: var(--font-geist-sans), system-ui, sans-serif;
     --text-base: 1rem;
+    --text-xs: 0.75rem;
     --text-sm: 0.875rem;
     --text-md: 1.125rem;
     --text-lg: 1.25rem;
@@ -45,9 +46,12 @@ body {
     background: var(--color-cardBackground);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--font-Boldonse);
-    font-weight: 400;   /* Boldonse is a single-weight font (400) */
+    font-weight: 400;
+    /* Boldonse is a single-weight font (400) */
 }
 
 h1,

@@ -16,6 +16,7 @@ export type SiteContent = {
     name: string;
     url: string;
     logo?: string;
+    logoDark?: string;
     seo: {
         title: string;
         description: string;
