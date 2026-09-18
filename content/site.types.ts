@@ -80,6 +80,14 @@ export type SiteContent = {
     analytics: {
         gaId: string;
     };
+    faq: {
+        title: string;
+        subtitle: string;
+        items: {
+            question: string;
+            answer: string;
+        }[];
+    };
     footer: {
         companyName: string;
         email: string;

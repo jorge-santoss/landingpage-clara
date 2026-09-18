@@ -80,7 +80,7 @@
     },
     {
         "name": "COUPLE",
-        "description": "Une séance individuelle pour créer des portraits naturels qui vous ressemblent.",
+        "description": "Une parenthèse à deux pour capturer votre complicité, vos gestes et les petits moments qui vous appartiennent.",
         "inclus": [
             "1h30 de séance",
             "En extérieur ou sur le lieu de votre choix",
@@ -106,7 +106,7 @@
     },
     {
         "name": "ÉVÉNEMENT",
-        "description": "Anniversaire, baptême, soirée privée ou événement professionnel : je raconte votre événement au fil des moments importants..",
+        "description": "Anniversaire, baptême, soirée privée ou événement professionnel : je raconte votre événement au fil des moments importants.",
          "inclus": [
             "À partir de 2 heures de présencee",
             "Photographies prises sur le vif",
@@ -119,7 +119,7 @@
     },
     {
         "name": "MARIAGE",
-        "description": "Une journée inoubliable capturée avec authenticité : des préparatifs aux moments forts, je raconte votre histoire avec des images naturelles, élégantes et pleines d’émotion..",
+        "description": "Une journée inoubliable capturée avec authenticité : des préparatifs aux moments forts, je raconte votre histoire avec des images naturelles, élégantes et pleines d’émotion.",
         "inclus": [
             "À partir de 6 heures de présencee",
             "Reportage complet : préparatifs, cérémonie, couple, invités, détails",
@@ -167,6 +167,44 @@
     "image" : "/images/claraportrait.png"
   },
   "analytics": { "gaId": "" },
+
+  "faq": {
+    "title": "FAQ",
+    "subtitle": "Retrouvez les questions les plus fréquentes concernant les séances photo et nos services.",
+    "items": [
+      {
+        "question": "Où réalisez-vous les séances ?",
+        "answer": "Je me déplace principalement à Cannes, Antibes, Nice et dans les environs. Je peux également me déplacer ailleurs sur la Côte d’Azur selon votre projet."
+      },
+      {
+        "question": "Est-ce que vous faites des séances en intérieur ?",
+        "answer": "Oui. Une séance peut être réalisée chez vous, dans un studio partenaire ou dans un autre lieu adapté à votre projet.."
+      },
+      {
+        "question": "Je ne suis pas à l’aise devant l’objectif. Est-ce un problème ?",
+        "answer": "Pas du tout. Vous n’avez pas besoin de savoir poser. Je vous guide lorsque c’est nécessaire et privilégie les interactions naturelles."
+      },
+      {
+        "question": "Combien de temps faut-il attendre pour recevoir les photos ?",
+        "answer": "Les photos sont généralement livrées sous 2 à 3 semaines après la séance. Pour les événements, le délai peut varier selon le nombre d'images."
+      },
+      {
+        "question": "Les photos sont-elles retouchées ?",
+        "answer": "Oui. Toutes les images livrées sont soigneusement sélectionnées et retouchées afin d'obtenir un résultat naturel et cohérent."
+      },
+      {
+        "question": "Est-il possible de demander des photos supplémentaires ?",
+        "answer": "Oui. Des photographies supplémentaires peuvent être ajoutées à votre formule."
+      },
+      {
+        "question": "Peut-on choisir le lieu de la séance ?",
+        "answer": "Bien sûr. Nous pouvons choisir ensemble un lieu qui correspond à votre personnalité et à l'ambiance recherchée."
+      },{
+        "question": "Travaillez-vous uniquement sur la Côte d'Azur ?",
+        "answer": "La Côte d'Azur est ma région principale, mais je peux me déplacer pour certains projets. N'hésitez pas à me contacter pour en discuter."
+      }
+    ]
+  },
   "footer": {
     "companyName": "L'ATELIER DE CLARA",
     "email": "contact@latelierdeclara.com",

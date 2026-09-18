@@ -23,12 +23,6 @@ margin-inline: var(--space-xl);
     text-align: center;
 }
 
-.introduction {
-    font-size: var(--text-md);
-    margin-block-end: var(--space-lg);
-    margin-inline: var(--space-xl);
-    text-align: center;
-}
 
 .photo {
     border-radius: 1rem;       

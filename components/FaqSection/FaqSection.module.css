@@ -1,0 +1,68 @@
+.faqSection {
+   padding-block: var(--space-xl);
+}
+
+.title {
+    font-size: var(--text-3xl);
+    margin-block-end: var(--space-lg);
+    text-align: center;
+}
+
+.subtitle {
+    font-size: var(--text-lg);
+    margin-block-end: var(--space-lg);
+    text-align: center;
+}
+
+.items {
+    list-style: none;
+    padding-inline-start: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.item {
+ font-size: var(--text-md);
+    margin-block-end: var(--space-md);
+    background-color: var(--color-surface);
+    padding: var(--space-md) var(--space-lg);
+    border-radius: 1rem;
+}
+
+.h3 {
+    font-size: var(--text-md);
+    margin: 0;
+}
+
+.p {
+    font-size: var(--text-base);
+   
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-md);
+    cursor: pointer;
+    list-style: none;               /* Firefox: hide the default marker ▸ */
+}
+
+.summary::-webkit-details-marker {
+    display: none;                  /* Safari/Chrome: hide default marker */
+}
+
+.arrow {
+    font-size: var(--text-xl);
+    color: var(--color-primary);
+    transition: transform 0.3s ease;
+}
+
+.item[open] .arrow {
+    transform: rotate(90deg);       
+}
+
+.item[open] .p {
+    margin-top: var(--space-md);    
+}

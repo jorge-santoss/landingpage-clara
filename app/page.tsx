@@ -6,6 +6,7 @@ import SocialProof from "@/components/SocialProof/SocialProof";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import CtaSection from "@/components/CtaSection/CtaSection";
+import FaqSection from "@/components/FaqSection/FaqSection";
 import Carrousel from "@/components/Carrousel/Carrousel";
 
 export default function Home() {
@@ -17,9 +18,10 @@ export default function Home() {
                 <Presentation/>
                 <Portfolio/>
                 <Solution/>
-                <Carrousel />
+                <Carrousel/>
                 <SocialProof/>
                 <CtaSection/>
+                <FaqSection/>
             </main>
             <Footer/>
         </>

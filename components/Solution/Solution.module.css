@@ -60,7 +60,7 @@ gap: var(--space-md);
 }
 
 .itemPrice {
-    font-size: var(--text-1xl);
+    font-size: var(--text-lg);
     font-weight: 600;
     /* color: var(--color-primary); */
     text-align: center;
