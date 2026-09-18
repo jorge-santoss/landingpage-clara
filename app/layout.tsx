@@ -1,5 +1,5 @@
 import type {Metadata} from "next";
-import {Geist, Momo_Trust_Display} from "next/font/google";
+import {Geist, Boldonse} from "next/font/google";
 import "./globals.css";
 import {site} from "@/content/site";
 import ConsentBanner from "@/components/ConsentBanner/ConsentBanner";
@@ -10,8 +10,8 @@ const geistSans = Geist({
     subsets: ["latin"],
 });
 
-const momo = Momo_Trust_Display({
-    variable: "--font-momo",
+const boldonse = Boldonse({
+    variable: "--font-Boldonse",
     weight: "400",
     subsets: ["latin"],
 });     
@@ -56,7 +56,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="fr" className={`${geistSans.variable} ${momo.variable}`} style={themeVars}>
+        <html lang="fr" className={`${geistSans.variable} ${boldonse.variable}`} style={themeVars}>
         <body>
         {children}
         <ConsentBanner/>

@@ -6,7 +6,7 @@
 }
 
 .subtitle {
-    font-size: var(--text-lg);
+    font-size: var(--text-xl);
     margin-block-end: var(--space-md);
     color: var(--color-text);
     text-align: center;

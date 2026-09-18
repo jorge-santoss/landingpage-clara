@@ -4,7 +4,9 @@
     left: 0;
     right: 0;
     z-index: 10;
+   
 }
+
 
 
 .nav {
@@ -24,15 +26,18 @@
 
 
 .brand {
-    font-weight: 700;
+    font-family: var(--font-Boldonse);
+    font-size: var(--text-lg);
+    font-weight: 400;
     color: var(--color-background);
     text-decoration: none;
 }
 
 .links {
+    font-family: var(--font-Boldonse);
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-md);
+    gap: var(--space-xs);
     list-style: none;
     padding: 0;
 }
@@ -40,7 +45,7 @@
 .links a {
     color: var(--color-background);  
     text-decoration: none;
-    padding: var(--space-xs) var(--space-md);  
+    padding: var(--space-sm) var(--space-md);  
     border-radius: 5rem;             
     transition: background 0.3s ease-in-out;
 }

@@ -44,8 +44,8 @@ body {
 }
 
 h1, h2, h3 {
-    font-family: var(--font-momo);
-    font-weight: 400;   /* Momo is a single-weight font (400) */
+    font-family: var(--font-Boldonse);
+    font-weight: 400;   /* Boldonse is a single-weight font (400) */
 }
 
 h1,
