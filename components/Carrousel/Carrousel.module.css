@@ -54,6 +54,7 @@
   display: inline-block;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   border: 1px solid #444;
+  border-radius: 1rem;
 }
 
 .cards .item img {
@@ -61,6 +62,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  border-radius: 1rem;
 }
 
 .navControls {
