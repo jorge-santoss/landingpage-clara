@@ -11,7 +11,8 @@
 
 .field {
     display: grid;
-    gap: var(--space-sm);
+    /* gap: var(--space-sm); */
+     gap: 0.25rem;  
 }
 
 .field label {
@@ -20,7 +21,7 @@
 }
 
 .field input {
-    padding: var(--space-xs) var(--space-md);
+    padding: var(--space-sm) var(--space-md);
     border: 1px solid var(--color-text-muted);
     border-radius: 0.5rem;
     font: inherit;
@@ -40,6 +41,7 @@
 
 .consent input {
     margin-block-start: 0.3rem;
+   
 }
 
 .error {
@@ -53,8 +55,7 @@
 }
 
 .submit {
-    margin-inline: auto;
-    justify-self: start;
+   width: 100%;
     background: var(--color-primary);
     color: #fff;
     border: none;
@@ -63,7 +64,7 @@
     font: inherit;
     font-weight: 600;
     cursor: pointer;
-    width: 35vw;
+  
 }
 
 .submit:hover {
@@ -86,4 +87,22 @@
     border-radius: 8px;
     height: 600px;
     margin-right: 100px;
+}
+
+@media (max-width: 48rem) {
+    .globalForm {
+        grid-template-columns: 1fr;    /* stack: image on top, form below */
+    }
+
+    .form {
+        max-width: 100%;
+    }
+
+    .formImage {
+        height: auto;                 /* banner instead of giant 600px */
+        width: 100%;
+        margin-right: 0;
+        object-fit: cover;
+        margin-block-end: var(--space-lg);
+    }
 }
