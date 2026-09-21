@@ -60,7 +60,6 @@
 }
 
 .logo {
-    display: block;
     width: auto;
     height: clamp(2rem, 6vw, 2.5rem);
 }
@@ -201,10 +200,6 @@
    :hover rule sticks after the tap and leaves the link highlighted. */
 
 @media (hover: hover) {
-
-    .logoWhite {
-    display: none;
-}
 
     .links a:hover {
         background: var(--color-primary);

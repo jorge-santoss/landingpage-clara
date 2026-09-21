@@ -37,9 +37,7 @@
     max-width: 32rem;
     margin-inline: auto;
     height: auto;
-    max-height: clamp(16rem, 60vw, 32rem);
     border-radius: 0.5rem;
-    object-fit: cover;
 }
 
 .items {
@@ -55,7 +53,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: var(--space-md);
+    gap: var(--space-xl);
     font-size: var(--text-xl);
     padding: var(--space-sm) 0;
     min-height: var(--tap-target);
@@ -77,16 +75,28 @@
 @media (min-width: 64rem) {
 
     .grid {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: center;
         gap: var(--space-xl);
     }
 
     .image {
         max-width: none;
+        width: auto;
+        margin: 0;
+        flex: 0 0 auto;
+        align-self: center;
+        /* match the list height: 5 rows x 3rem + 4 gaps x 1rem
+           -> the portrait keeps its ratio, spanning PORTRAIT..MARIAGE */
+     width: auto;
+    height: 28rem;  /* 304px = list height, PORTRAIT..MARIAGE */
+        max-height: none;
     }
 
     .items {
-        gap: var(--space-xl);
+        gap: var(--space-md);
     }
 
     .item {

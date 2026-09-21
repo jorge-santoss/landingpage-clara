@@ -12,7 +12,6 @@
     display: grid;
     gap: var(--space-md);
     grid-template-columns: repeat(auto-fit, minmax(min(17rem, 100%), 1fr));
-    align-items: start;
 }
 
 .card {
@@ -83,6 +82,7 @@
 @media (min-width: 64rem) {
 
     .items {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         gap: var(--space-lg);
     }
 }

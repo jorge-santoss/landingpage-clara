@@ -121,9 +121,12 @@
 @media (min-width: 64rem) {
 
     .globalForm {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        gap: var(--space-2xl);
-        align-items: center;
+        grid-template-columns: auto auto;
+        gap: var(--space-lg);
+        align-items: start;
+        width: fit-content;
+        max-width: 100%;
+        margin-inline: auto;
     }
 
     .form {
@@ -131,7 +134,9 @@
     }
 
     .formImage {
-        max-height: 37.5rem;
+        width: auto;
+        max-width: 100%;
+        max-height: 33rem;
     }
 }
 
