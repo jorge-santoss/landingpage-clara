@@ -1,52 +1,91 @@
+/* =====================================================================
+   Footer — clean column grid
+   ===================================================================== */
+
 .footer {
-  background-color: #4A3E3D;
-  color: #ffffff;
-  padding: 60px 60px 40px 60px;
   width: 100%;
   box-sizing: border-box;
+  padding: clamp(3rem, 6vw, 4.5rem) var(--space-xl) var(--space-xl);
+  background-color: var(--color-primary);
+  color: var(--color-background);
 }
 
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
+/* ---------------------------------------------------------------------
+   Top row : brand | nav | legal | newsletter  (4 columns)
+   --------------------------------------------------------------------- */
 
 .topRow {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns:
+    minmax(220px, 1.4fr)   /* brand */
+    minmax(120px, 0.7fr)   /* nav */
+    minmax(150px, 0.9fr)   /* legal */
+    minmax(280px, 1.4fr);  /* newsletter */
+  gap: var(--space-2xl) var(--space-xl);
+  align-items: start;
   width: 100%;
-  margin-bottom: 40px;
+  padding-bottom: clamp(2rem, 4vw, 3rem);
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--color-background) 18%, transparent);
 }
 
-/* Bloc Logo + Titre centré + Adresse */
+/* --- Brand column ----------------------------------------------------- */
+
 .brandCol {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 8px;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  min-width: 0;
+}
+
+.brandCol img {
+  max-width: 96px;
+  height: auto;
 }
 
 .brandTitle {
   font-family: var(--font-Boldonse);
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #ffffff;
-  margin: 4px 0 0 0;
-  text-align: center;
+  font-size: var(--text-md);
+  color: var(--color-background);
+  margin: var(--space-xs) 0 0;
   letter-spacing: 0.05em;
   line-height: 1.2;
 }
 
 .address {
   font-family: var(--font-sans);
-  font-size: 14px;
-  font-weight: 600;
-  margin-top: 4px;
-  text-align: center;
-  white-space: nowrap;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: 1.7;
+  margin: 0;
+  opacity: 0.75;
+  white-space: normal;
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  min-width: 0;
+}
+
+/* --- Link columns ----------------------------------------------------- */
+
+.navCol,
+.legalCol {
+  min-width: 0;
+}
+
+.colTitle {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-background);
+  opacity: 0.55;
+  margin: 0 0 var(--space-md);
 }
 
 .navCol ul,
@@ -56,74 +95,133 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: var(--space-sm);
 }
 
 .navCol a,
 .legalCol a {
+  position: relative;
+  display: inline-block;
   font-family: var(--font-sans);
-  color: #ffffff;
+  color: var(--color-background);
   text-decoration: none;
-  font-size: 15px;
-  font-weight: 700;
+  font-size: var(--text-base);
+  font-weight: 600;
+  opacity: 0.85;
   white-space: nowrap;
+  transition: opacity 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
+.navCol a::after,
+.legalCol a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1.5px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* --- Newsletter column ------------------------------------------------ */
+
 .newsletterCol {
-  align-self: flex-end;
+  min-width: 0;
+  width: 100%;
+}
+
+.newsletterTitle {
+  font-family: var(--font-Boldonse);
+  font-size: var(--text-md);
+  color: var(--color-background);
+  margin: 0 0 var(--space-md);
+  letter-spacing: 0.05em;
+  line-height: 1.2;
 }
 
 .newsletterForm {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: var(--space-xs);
+  padding: 0.35rem;
+  border-radius: 999px;
+  border: 1px solid
+    color-mix(in srgb, var(--color-background) 35%, transparent);
+  background-color: color-mix(in srgb, var(--color-background) 10%, transparent);
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
+}
+
+.newsletterForm:focus-within {
+  border-color: var(--color-background);
+  background-color: color-mix(in srgb, var(--color-background) 16%, transparent);
+  box-shadow: 0 0 0 4px
+    color-mix(in srgb, var(--color-background) 18%, transparent);
 }
 
 .emailInput {
+  flex: 1 1 auto;
+  min-width: 0;
   font-family: var(--font-sans);
-  padding: 10px 14px;
-  border-radius: 6px;
-  border: 1px solid #ffffff;
-  background: #ffffff;
-  color: #333333;
-  font-size: 13px;
+  font-size: var(--text-sm);
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  background: transparent;
+  color: var(--color-background);
   outline: none;
-  width: 200px;
+  min-height: var(--tap-target);
+}
+
+.emailInput::placeholder {
+  color: color-mix(in srgb, var(--color-background) 62%, transparent);
+  opacity: 1;
 }
 
 .submitBtn {
+  flex: 0 0 auto;
   font-family: var(--font-sans);
-  padding: 10px 18px;
-  border-radius: 6px;
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: 999px;
   border: none;
-  background-color: #D3C3BF;
-  color: #4A3E3D;
+  background-color: var(--color-background);
+  color: var(--color-primary);
   font-weight: 700;
-  font-size: 13px;
+  font-size: var(--text-sm);
   cursor: pointer;
+  min-height: var(--tap-target);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-/* Grand Titre */
+/* ---------------------------------------------------------------------
+   Big title
+   --------------------------------------------------------------------- */
+
 .bigTitleWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 0 35px 0;
   width: 100%;
+  margin: clamp(2rem, 4vw, 3rem) 0 clamp(1.5rem, 3vw, 2rem);
 }
 
 .bigTitle {
   font-family: var(--font-Boldonse);
-  font-size: 5rem;
-  font-weight: 800;
-  color: #ffffff;
+  font-size: var(--text-3xl);
+  color: var(--color-background);
   text-align: center;
+  text-wrap: balance;
   margin: 0;
   letter-spacing: 0.02em;
-  white-space: nowrap;
+  line-height: 1.05;
 }
 
-/* Barre blanche Follow Me */
+/* ---------------------------------------------------------------------
+   Social bar
+   --------------------------------------------------------------------- */
+
 .socialBarWrapper {
   display: flex;
   justify-content: center;
@@ -131,37 +229,261 @@
 }
 
 .socialBar {
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 10px 24px;
   display: flex;
   align-items: center;
-  gap: 16px;
+  justify-content: space-between;
+  gap: var(--space-lg);
   width: 100%;
   box-sizing: border-box;
+  padding: var(--space-md) var(--space-lg);
+  background-color: var(--color-background);
+  border-radius: 14px;
 }
 
 .socialText {
   font-family: var(--font-sans);
-  font-size: 15px;
+  font-size: var(--text-base);
   font-weight: 700;
-  color: #4A3E3D;
+  letter-spacing: 0.02em;
+  color: var(--color-primary);
+  flex-shrink: 0;
 }
 
 .socialIcons {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: var(--space-sm);
 }
 
 .iconBox {
-  background-color: #4A3E3D;
-  color: #ffffff;
-  width: 34px;
-  height: 34px;
-  border-radius: 8px;
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease-in-out, transform 0.25s ease-in-out;
+}
+
+/* ---------------------------------------------------------------------
+   Copyright
+   --------------------------------------------------------------------- */
+
+.copyright {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  color: var(--color-background);
+  text-align: center;
+  margin: var(--space-xl) 0 0;
+  opacity: 0.7;
+}
+
+/* Focus ring must stay visible on the dark footer */
+.navCol a:focus-visible,
+.legalCol a:focus-visible,
+.emailInput:focus-visible,
+.submitBtn:focus-visible {
+  outline-color: var(--color-background);
+}
+
+.submitBtn:focus-visible {
+  outline: 2px solid var(--color-background);
+  outline-offset: 3px;
+}
+
+/* ---------------------------------------------------------------------
+   Hover (pointer devices only)
+   --------------------------------------------------------------------- */
+
+@media (hover: hover) {
+  .navCol a:hover,
+  .legalCol a:hover {
+    opacity: 1;
+    color: var(--color-primary-hover);
+  }
+
+  .navCol a:hover::after,
+  .legalCol a:hover::after {
+    transform: scaleX(1);
+  }
+
+  .submitBtn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 22px -14px rgba(0, 0, 0, 0.6);
+  }
+
+  .iconBox:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-2px);
+  }
+}
+
+/* =====================================================================
+   Responsive
+   ===================================================================== */
+
+/* Tablet — brand full-width on top, then nav + legal + newsletter in 3 cols */
+@media (min-width: 48rem) and (max-width: 63.999rem) {
+
+  .footer {
+    padding: var(--space-xl);
+  }
+
+  .topRow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-xl) var(--space-lg);
+  }
+
+  .brandCol {
+    grid-column: 1 / -1;
+    align-items: center;
+    text-align: center;
+  }
+
+  .newsletterCol {
+    grid-column: 1 / -1;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .newsletterTitle {
+    text-align: center;
+  }
+}
+
+/* Phone — compact: brand row, nav & legal side by side, full-width newsletter */
+@media (max-width: 48rem) {
+
+  .footer {
+    padding: var(--space-lg) var(--space-md) var(--space-md);
+  }
+
+  .topRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--space-lg);
+    row-gap: var(--space-lg);
+    align-items: start;
+    text-align: left;
+    padding-bottom: var(--space-lg);
+  }
+
+  .brandCol {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-xs);
+  }
+
+  /* keep the logo compact on small screens */
+  .brandCol img {
+    max-width: 96px;
+    height: auto;
+  }
+
+  .brandText {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .brandTitle {
+    margin: 0;
+  }
+
+  .navCol,
+  .legalCol {
+    min-width: 0;
+  }
+
+  .navCol ul,
+  .legalCol ul {
+    align-items: flex-start;
+    gap: var(--space-xs);
+  }
+
+  .navCol a,
+  .legalCol a {
+    white-space: normal;
+  }
+
+  .colTitle {
+    text-align: left;
+    margin-bottom: var(--space-md);
+  }
+
+  .newsletterCol {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+
+  .newsletterTitle {
+    text-align: left;
+    margin-bottom: var(--space-sm);
+  }
+
+  .newsletterForm {
+    flex-direction: column;
+    gap: var(--space-sm);
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .newsletterForm:focus-within {
+    border-color: transparent;
+    box-shadow: none;
+  }
+
+  .emailInput {
+    width: 100%;
+    text-align: left;
+    background-color: transparent;
+    color: var(--color-background);
+    border: 2px solid
+      color-mix(in srgb, var(--color-background) 45%, transparent);
+    border-radius: 999px;
+  }
+
+  .emailInput:hover,
+  .emailInput:focus {
+    border-color: var(--color-background);
+  }
+
+  .emailInput::placeholder {
+    color: color-mix(in srgb, var(--color-background) 62%, transparent);
+    opacity: 1;
+  }
+
+  .submitBtn {
+    width: 100%;
+  }
+
+  .bigTitleWrapper {
+    margin: var(--space-xl) 0 var(--space-md);
+  }
+
+  .bigTitle {
+    font-size: var(--text-xl);
+    overflow-wrap: anywhere;
+  }
+
+  .socialBar {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: var(--space-sm);
+  }
+
+  .iconBox {
+    width: 36px;
+    height: 36px;
+  }
+
+  .copyright {
+    margin-top: var(--space-md);
+  }
 }

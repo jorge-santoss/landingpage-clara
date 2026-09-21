@@ -70,6 +70,7 @@ export default function ContactForm() {
         <>
         <div className={styles.globalForm}>
             <img src={site.cta.image} alt={site.cta.title} className={styles.formImage} />
+            <img src={site.cta.imageMobile} alt={site.cta.title} className={styles.formImageMobile} />
             <form className={styles.form} onSubmit={handleSubmit} noValidate>
                 <div className={styles.field}>
                     <label htmlFor="name">Nom</label>

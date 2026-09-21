@@ -77,6 +77,7 @@ export type SiteContent = {
         intro: string;
         formEndpoint: string;
         image: string;
+        imageMobile: string;
     };
     analytics: {
         gaId: string;
@@ -93,5 +94,18 @@ export type SiteContent = {
         companyName: string;
         email: string;
         phone: string;
+        logo: string;
+        brandName: string;
+        address: string;
+        navLinks: { label: string; href: string }[];
+        navTitle: string;
+        legalLinks: { label: string; href: string }[];
+        legalTitle: string;
+        newsletterTitle: string;
+        newsletterPlaceholder: string;
+        newsletterSubmit: string;
+        bigTitle: string;
+        socialText: string;
+        social: { label: string; href: string }[];
     };
 };

@@ -109,13 +109,22 @@
     height: 1px;
 }
 
-.formImage {
+.formImage,
+.formImageMobile {
     width: 100%;
     height: auto;
     max-height: clamp(14rem, 55vw, 37.5rem);
     border-radius: 8px;
     object-fit: cover;
     object-position: center;
+}
+
+.formImage {
+    display: none;
+}
+
+.formImageMobile {
+    display: block;
 }
 
 @media (min-width: 64rem) {
@@ -134,9 +143,14 @@
     }
 
     .formImage {
+        display: block;
         width: auto;
         max-width: 100%;
         max-height: 33rem;
+    }
+
+    .formImageMobile {
+        display: none;
     }
 }
 

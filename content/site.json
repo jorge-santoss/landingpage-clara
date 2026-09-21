@@ -165,7 +165,8 @@
     "title": "Parlez‑nous de votre projet",
     "intro": "Laissez-nous vos coordonnées, nous revenons vers vous sous 48h.",
     "formEndpoint": "",
-    "image" : "/images/claraportrait.png"
+    "image" : "/images/claraportrait.png",
+    "imageMobile" : "/images/contactform-mobile.png"
   },
   "analytics": { "gaId": "" },
 
@@ -209,6 +210,33 @@
   "footer": {
     "companyName": "L'ATELIER DE CLARA",
     "email": "contact@latelierdeclara.com",
-    "phone": "+33 06 12 34 56 78"
+    "phone": "+33 06 12 34 56 78",
+    "logo": "/images/Logo-Footer.png",
+    "brandName": "L'Atelier de Clara",
+    "address": "123 Bd Republique, Cannes",
+    "navLinks": [
+      { "label": "Portfolio", "href": "#portfolio" },
+      { "label": "À propos", "href": "#presentation" },
+      { "label": "Prestations", "href": "#solution" },
+      { "label": "FAQ", "href": "#faq" },
+      { "label": "Contact", "href": "#contact" }
+    ],
+    "navTitle": "Navigation",
+    "legalLinks": [
+      { "label": "Politique de confidentialité", "href": "/politique-de-confidentialite" },
+      { "label": "Conditions générales", "href": "/cgv" },
+      { "label": "Droits d'auteur", "href": "/droits-auteur" }
+    ],
+    "legalTitle": "Liens légaux",
+    "newsletterTitle": "Newsletter",
+    "newsletterPlaceholder": "you@example.com",
+    "newsletterSubmit": "Envoyer",
+    "bigTitle": "L'atelier de Clara",
+    "socialText": "Follow me",
+    "social": [
+      { "label": "Instagram", "href": "#" },
+      { "label": "Facebook", "href": "#" },
+      { "label": "TikTok", "href": "#" }
+    ]
   }
 }
