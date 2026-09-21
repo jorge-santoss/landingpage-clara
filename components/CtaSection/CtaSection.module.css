@@ -35,6 +35,7 @@
     text-align: center;
     width: 40rem;
     padding: 1rem;
+    align-items: flex-start;
 }
 
 .icons_svg {
