@@ -8,7 +8,7 @@
 } */
 
 .hero {
-    background: url("/images/clara-heromobile.png") center/cover no-repeat;
+    background: url("/images/mobile-herov3.png") center/cover no-repeat;
     min-height: 70vh;
     aspect-ratio: 3/ 4;
     display: flex;
