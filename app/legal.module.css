@@ -1,6 +1,7 @@
 .legal {
     padding-block: var(--space-xl);
     max-width: 42rem;
+    margin-inline: auto;
 }
 
 .legal h1 {
@@ -15,8 +16,12 @@
 
 .legal p {
     margin-block-end: var(--space-md);
+      line-height: 1.6;
+    overflow-wrap: break-word;
 }
 
 .legal a {
     color: var(--color-primary);
+    overflow-wrap: anywhere;
+    
 }

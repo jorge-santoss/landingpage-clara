@@ -2,32 +2,39 @@
     padding-block: var(--space-xl);
 }
 
+/* Centred measure instead of a fixed 3rem side margin, which left only
+   ~230px of text on a 360px phone. */
+
 .title {
     font-size: var(--text-xl);
+    max-width: 48rem;
     margin: 0 auto var(--space-lg);
-    margin-inline: var(--space-xl);
     text-align: center;
 }
 
-.subtitle {
-    font-size: var(--text-md);
-    margin-block-end: var(--space-lg);
-    margin-inline: var(--space-xl);
-    text-align: center;
-}
-
+.subtitle,
 .subtitle2 {
     font-size: var(--text-md);
-    margin-block-end: var(--space-lg);
-margin-inline: var(--space-xl);
+    max-width: 44rem;
+    margin: 0 auto var(--space-lg);
     text-align: center;
+    line-height: 1.6;
 }
 
-
 .photo {
-    border-radius: 1rem;       
-    width: 100%;                
-    height: auto;               
-    display: block;             
+    width: 100%;
+    /* stops the portrait from becoming a 1000px tall block on desktop */
+    max-height: clamp(18rem, 48vw, 34rem);
+    border-radius: 1rem;
+    display: block;
     object-fit: cover;
+    object-position: center;
+}
+
+@media (min-width: 64rem) {
+
+    .photo {
+        max-width: 60rem;
+        margin-inline: auto;
+    }
 }

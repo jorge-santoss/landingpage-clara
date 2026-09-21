@@ -1,12 +1,17 @@
 .globalForm {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    align-items: start;
+    width: 100%;
 }
 
 .form {
-    display: grid;
-    gap: var(--space-md); 
+  display: grid;
+    gap: var(--space-md);
+    width: 100%;
     max-width: 32rem;
+    margin-inline: auto;
 }
 
 .field {
@@ -21,27 +26,45 @@
 }
 
 .field input {
+   width: 100%;
+    min-height: var(--tap-target);
     padding: var(--space-sm) var(--space-md);
     border: 1px solid var(--color-text-muted);
     border-radius: 0.5rem;
     font: inherit;
+    /* 16px floor prevents iOS Safari zooming in on focus */
+    font-size: max(1rem, 16px);
 }
 
-.field input[aria-invalid="true"] {
-    border-color: #4B4038;
+.field input[aria-invalid="true"],
+.field textarea[aria-invalid="true"] {
+    border-color: #b91c1c;
 }
 
 .field textarea {
-    padding: var(--space-sm) var(--space-md);
-    border: 1px solid var(--color-text-muted);
+   
     border-radius: 0.5rem;
-    font: inherit;
-    resize: vertical;
+   resize: vertical;
+    min-height: 7rem;
+}
+.consent {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
 }
 
 .consent input {
-    margin-block-start: 0.3rem;
+   flex-shrink: 0;
+    width: 1.15rem;
+    height: 1.15rem;
+    margin: 0;
+    margin-block-start: 0.2rem;
    
+}
+
+.consent label {
+    font-size: var(--text-sm);
+    line-height: 1.5;
 }
 
 .error {
@@ -50,12 +73,14 @@
 }
 
 .success {
-    color: #15803d;
+   color: #15803d;
     font-weight: 600;
+    text-align: center;
 }
 
 .submit {
-   width: 100%;
+ width: 100%;
+    min-height: var(--tap-target);
     background: var(--color-primary);
     color: #fff;
     border: none;
@@ -64,12 +89,13 @@
     font: inherit;
     font-weight: 600;
     cursor: pointer;
+    transition: background 0.3s ease-in-out;
   
 }
 
-.submit:hover {
+/* .submit:hover {
     background: var(--color-primary-hover);
-}
+} */
 
 .submit:disabled {
     opacity: 0.6;
@@ -84,25 +110,34 @@
 }
 
 .formImage {
+    width: 100%;
+    height: auto;
+    max-height: clamp(14rem, 55vw, 37.5rem);
     border-radius: 8px;
-    height: 600px;
-    margin-right: 100px;
+    object-fit: cover;
+    object-position: center;
 }
 
-@media (max-width: 48rem) {
+@media (min-width: 64rem) {
+
     .globalForm {
-        grid-template-columns: 1fr;    /* stack: image on top, form below */
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: var(--space-2xl);
+        align-items: center;
     }
 
     .form {
-        max-width: 100%;
+        margin-inline: 0;
     }
 
     .formImage {
-        height: auto;                 /* banner instead of giant 600px */
-        width: 100%;
-        margin-right: 0;
-        object-fit: cover;
-        margin-block-end: var(--space-lg);
+        max-height: 37.5rem;
+    }
+}
+
+@media (hover: hover) {
+
+    .submit:hover:not(:disabled) {
+        background: var(--color-primary-hover);
     }
 }

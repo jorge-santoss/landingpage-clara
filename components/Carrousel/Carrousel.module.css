@@ -14,27 +14,35 @@
 
 .introduction {
     font-size: var(--text-md);
-    margin-block-end: var(--space-lg);
+    max-width: 48rem;
+    margin: 0 auto var(--space-lg);
     color: var(--color-text);
     text-align: center;
+    line-height: 1.6;
 }
 
 .carousel {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  anchor-name: --carousel;
-  anchor-scope: --carousel;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  overscroll-behavior-inline: contain;
-  position: relative;
-  container-type: size;
-  height: min(50vh, 500px);
-  scroll-snap-type: inline mandatory;
-  scroll-behavior: smooth;
-  scroll-marker-group: after;
+ list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    anchor-name: --carousel;
+    anchor-scope: --carousel;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    position: relative;
+    container-type: size;
+    height: clamp(16rem, 42vw, 31.25rem);
+    scroll-snap-type: inline mandatory;
+    scroll-behavior: smooth;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
 }
 
 .carousel.paginated {
@@ -48,13 +56,13 @@
 }
 
 .cards .item {
-  min-width: 240px;
-  height: calc(100cqh - 32px);
-  margin: 8px;
-  display: inline-block;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  border: 1px solid #444;
-  border-radius: 1rem;
+flex: 0 0 auto;
+    width: clamp(13rem, 55vw, 21rem);
+    height: calc(100cqh - 16px);
+    margin: 8px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    border: 1px solid #444;
+    border-radius: 1rem;
 }
 
 .cards .item img {
@@ -67,35 +75,38 @@
 
 .navControls {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.75rem;
-  margin-top: 0.75rem;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-md);
+    margin-top: var(--space-md);
 }
 
 .navButton {
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 50%;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(6px);
-  color: #333;
-  font-size: 1rem;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
-  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    /* 44px minimum tap target (RGAA / WCAG 2.5.8) */
+    width: var(--tap-target);
+    height: var(--tap-target);
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.9);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+    color: #333;
+    font-size: 1.25rem;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
 
-.navButton:hover {
+
+/* .navButton:hover {
   background: #fff;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
   transform: translateY(-1px);
-}
+} */
 
 .navButton:active {
   transform: translateY(0);
@@ -107,7 +118,7 @@
   box-shadow: none;
 }
 
-.carousel::scroll-marker-group {
+/* .carousel::scroll-marker-group {
   overflow: auto;
   display: block;
   scroll-behavior: smooth;
@@ -115,9 +126,9 @@
   text-align: center;
   white-space: nowrap;
   height: 2.5rem;
-}
+} */
 
-.paginated::column::scroll-marker {
+/* .paginated::column::scroll-marker {
   content: "" / attr(data-label);
   width: 1.5rem;
   height: 1.5rem;
@@ -128,4 +139,32 @@
 
 .paginated::column::scroll-marker:target-current {
   background: #9999ff;
+} */
+
+@media (min-width: 64rem) {
+
+    .cards .item {
+        width: clamp(18rem, 24vw, 24rem);
+        height: calc(100cqh - 32px);
+        margin: 16px;
+    }
+}
+
+/* Phone held sideways: 42vw of a 844px-wide viewport would be a 355px
+   tall carousel inside a 390px tall screen. */
+
+@media (orientation: landscape) and (max-height: 30rem) {
+
+    .carousel {
+        height: 60svh;
+    }
+}
+
+@media (hover: hover) {
+
+    .navButton:hover {
+        background: #fff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16);
+        transform: translateY(-1px);
+    }
 }

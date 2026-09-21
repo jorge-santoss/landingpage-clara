@@ -11,14 +11,13 @@
 .items {
     display: grid;
     gap: var(--space-md);
-    grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
-    /* max-width: 48rem;
-    margin-inline: auto; */
+    grid-template-columns: repeat(auto-fit, minmax(min(17rem, 100%), 1fr));
+    align-items: start;
 }
 
 .card {
     background: var(--color-surface);
-    padding: var(--space-lg);
+    padding: clamp(1rem, 4vw, 2rem);
     border-radius: 0.5rem;
     box-shadow: 0 20px 30px -20px rgba(5, 5, 5, 0.24);
 }
@@ -47,16 +46,16 @@
     font-size: var(--text-base);
     font-weight: 600;
     color: var(--color-text);
+    overflow-wrap: anywhere;
 }
 
 .role {
-    font-size: 0.875rem;
+    font-size: var(--text-sm);
     color: var(--color-text-muted);
+    overflow-wrap: anywhere;
 }
 
-
 .quote {
-    /* font-size: var(--text-lg); */
     margin-top: var(--space-md);
     color: var(--color-text-muted);
     line-height: 1.6;
@@ -69,5 +68,21 @@
 .caption {
     margin-block-start: var(--space-md);
     color: var(--color-text-muted);
-    font-size: 0.875rem;
+    font-size: var(--text-sm);
+}
+
+/* Tablet portrait: two cards per row rather than three narrow ones. */
+
+@media (min-width: 48rem) and (max-width: 63.999rem) {
+
+    .items {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 64rem) {
+
+    .items {
+        gap: var(--space-lg);
+    }
 }

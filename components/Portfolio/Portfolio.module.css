@@ -14,29 +14,30 @@
     text-align: center;
 }
 
-
-.introduction {
-    font-size: var(--text-lg);
-    margin-block-end: var(--space-lg);
-    text-align: center;
-}
-
+.introduction,
 .introduction2 {
     font-size: var(--text-lg);
-    margin-block-end: var(--space-lg);
+    max-width: 48rem;
+    margin: 0 auto var(--space-lg);
     text-align: center;
+    line-height: 1.6;
 }
+
+/* Mobile / tablet portrait: image above, list below. */
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--space-xs);
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
     align-items: center;
 }
 
 .image {
-    width: 80%;
+    width: 100%;
+    max-width: 32rem;
+    margin-inline: auto;
     height: auto;
+    max-height: clamp(16rem, 60vw, 32rem);
     border-radius: 0.5rem;
     object-fit: cover;
 }
@@ -44,24 +45,20 @@
 .items {
     list-style: none;
     padding-inline-start: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
-    gap: var(--space-xl);
-
-}
-
-.item:hover {
-  transition: all 0.3s ease-in-out;
-  transform: translateX(10px);
-  /* cursor: pointer; */
+    gap: var(--space-md);
 }
 
 .item {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: var(--text-2xl);
+    gap: var(--space-md);
+    font-size: var(--text-xl);
     padding: var(--space-sm) 0;
+    min-height: var(--tap-target);
     border-radius: 0;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
@@ -69,11 +66,41 @@
 .arrow {
     color: var(--color-primary);
     flex-shrink: 0;
-
+    width: clamp(2rem, 6vw, 3.5rem);
+    height: auto;
 }
 
-@media (max-width: 48rem) {
+/* =====================================================================
+   >= 64rem (1024px) : two columns side by side
+   ===================================================================== */
+
+@media (min-width: 64rem) {
+
     .grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: var(--space-xl);
+    }
+
+    .image {
+        max-width: none;
+    }
+
+    .items {
+        gap: var(--space-xl);
+    }
+
+    .item {
+        font-size: var(--text-2xl);
+    }
+}
+
+@media (hover: hover) {
+
+    .item {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .item:hover {
+        transform: translateX(10px);
     }
 }

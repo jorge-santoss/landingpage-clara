@@ -1,13 +1,18 @@
+/* ============================================================
+   Mobile-first. The burger menu is used up to 64rem (1024px)
+   so that tablets in portrait (iPad Air 820px, iPad Pro 1024px)
+   get the compact nav instead of a cramped desktop pill.
+   ============================================================ */
+
 .header {
     position: fixed;
-    top: 1rem;
+    top: 0;
     left: 0;
     right: 0;
     z-index: 10;
-
+    /* clear the notch / dynamic island on iPhone */
+    padding-top: env(safe-area-inset-top, 0px);
 }
-
-
 
 .nav {
     display: flex;
@@ -15,20 +20,20 @@
     align-items: center;
     justify-content: space-between;
     gap: var(--space-sm) var(--space-md);
-    background: var(--color-primary);
-    /* backdrop-filter: blur(12px); */
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-    border-radius: 5rem;
-    padding-block: var(--space-xs);
-    padding-inline: var(--space-lg);
+    background: transparent;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding-block: var(--space-sm);
 }
-
 
 .brand {
     display: flex;
     align-items: center;
     gap: var(--space-sm);
+    min-height: var(--tap-target);
     font-family: var(--font-Boldonse);
     font-size: var(--text-lg);
     font-weight: 400;
@@ -36,57 +41,43 @@
     text-decoration: none;
 }
 
+/* --- Logo swap: dark logo over the light hero on small screens --- */
+
 .logoWhite {
-    /* shown by default — no override needed */
+    display: none;
 }
 
 .logoDark {
-    display: none;
-    /* hidden on desktop */
+    display: block;
 }
 
 .name {
+    display: none;
     color: var(--color-background);
     font-family: var(--font-Boldonse);
     font-size: var(--text-lg);
     text-decoration: none;
 }
 
-.links {
-    font-family: var(--font-Boldonse);
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-xs);
-    list-style: none;
-    padding: 0;
-}
-
-.links a {
-    color: var(--color-background);
-    text-decoration: none;
-    padding: var(--space-sm) var(--space-md);
-    border-radius: 5rem;
-    transition: background 0.3s ease-in-out;
-}
-
-.links a:hover {
-    background: var(--color-background);
-    color: var(--color-primary);
-    font-weight: 600;
-}
-
 .logo {
     display: block;
     width: auto;
-    height: 2.5rem;
+    height: clamp(2rem, 6vw, 2.5rem);
 }
 
-/* ----- Burger (hidden on desktop) ----- */
+/* -----------                  Burger                    ----------- */
+
 .burger {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: var(--tap-target);
+    height: var(--tap-target);
     background: none;
     border: none;
-    padding: var(--space-sm);
+    padding: 0;
     cursor: pointer;
 }
 
@@ -94,88 +85,137 @@
     display: block;
     width: 1.5rem;
     height: 2px;
-    background: var(--color-background);
+    background: var(--color-primary);
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.burgerBar+.burgerBar {
-    margin-top: 5px;
+.burger[aria-expanded="true"] .burgerBar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
 }
 
-/* ----- Mobile (≤ 768px) ----- */
-@media (max-width: 48rem) {
+.burger[aria-expanded="true"] .burgerBar:nth-child(2) {
+    opacity: 0;
+}
+
+.burger[aria-expanded="true"] .burgerBar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* -----------                Mobile menu                 ----------- */
+
+.links {
+    display: none;
+    /* hidden until the burger is pressed */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: var(--space-xs);
+    font-family: var(--font-Boldonse);
+    list-style: none;
+    padding: 0;
+    padding-block: var(--space-sm);
+    /* a very long menu must scroll rather than overflow the screen */
+    max-height: calc(100svh - var(--header-height));
+    overflow-y: auto;
+}
+
+.linksOpen {
+    display: flex;
+}
+
+.links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--tap-target);
+    color: var(--color-primary);
+    text-decoration: none;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: 5rem;
+    transition: background 0.3s ease-in-out;
+}
+
+/* =====================================================================
+   >= 64rem (1024px) : laptops, desktops, tablets in landscape
+   The floating pill nav with inline links.
+   ===================================================================== */
+
+@media (min-width: 64rem) {
 
     .header {
-    top: 0;
-   
-    .burger {
-        display: block;
+        top: 1rem;
     }
 
     .nav {
-        background: transparent;
-        -webkit-backdrop-filter: blur(12px);
-        backdrop-filter: blur(12px);
-        border: none;
-        border-radius: 0;
-        box-shadow: none;
-        padding-block: var(--space-sm);
+        flex-wrap: nowrap;
+        background: var(--color-primary);
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+        border-radius: 5rem;
+        padding-block: var(--space-xs);
+        padding-inline: var(--space-lg);
     }
 
-    /* --- Swap logos, hide name --- */
-    .logoWhite {
+    .burger {
         display: none;
     }
 
-    .logoDark {
+    .logoWhite {
         display: block;
     }
 
-    .name {
+    .logoDark {
         display: none;
     }
 
-    /* --- Burger: dark color --- */
+    .name {
+        display: inline;
+    }
+
+    .brand {
+        color: var(--color-background);
+    }
+
     .burgerBar {
-        background: var(--color-primary);
+        background: var(--color-background);
     }
 
     .links {
-        display: none;
-        /* hidden until opened */
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        gap: var(--space-md);
-        padding-block: var(--space-sm);
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        max-height: none;
+        overflow: visible;
+        gap: var(--space-xs);
+        padding-block: 0;
     }
 
     .links a {
-        color: var(--color-primary);
-
+        color: var(--color-background);
     }
+}
+
+/* Hover styles only on devices with a real pointer — on touch screens a
+   :hover rule sticks after the tap and leaves the link highlighted. */
+
+@media (hover: hover) {
+
+    .logoWhite {
+    display: none;
+}
 
     .links a:hover {
         background: var(--color-primary);
         color: var(--color-background);
+        font-weight: 600;
     }
 
-    .linksOpen {
-        display: flex;
-        /* shown when open */
+    @media (min-width: 64rem) {
+        .links a:hover {
+            background: var(--color-background);
+            color: var(--color-primary);
+        }
     }
-
-    /* Animate the 3 bars into an X */
-    .burger[aria-expanded="true"] .burgerBar:nth-child(1) {
-        transform: translateY(7px) rotate(45deg);
-    }
-
-    .burger[aria-expanded="true"] .burgerBar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .burger[aria-expanded="true"] .burgerBar:nth-child(3) {
-        transform: translateY(-7px) rotate(-45deg);
-    }
-}
 }

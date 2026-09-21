@@ -7,23 +7,23 @@
     /* -----------                 Typography                 ----------- */
 
     --font-sans: var(--font-geist-sans), system-ui, sans-serif;
-    --text-base: 1rem;
     --text-xs: 0.75rem;
     --text-sm: 0.875rem;
-    --text-md: 1.125rem;
-    --text-lg: 1.25rem;
-    --text-xl: 1.75rem;
-    --text-2xl: 2.25rem;
-    --text-3xl: 4rem;
+    --text-base: 1rem;
+    --text-md: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+    --text-lg: clamp(1.0625rem, 0.98rem + 0.39vw, 1.25rem);
+    --text-xl: clamp(1.25rem, 1.03rem + 0.98vw, 1.75rem);
+    --text-2xl: clamp(1.5rem, 1.17rem + 1.47vw, 2.25rem);
+    --text-3xl: clamp(2rem, 1.13rem + 3.91vw, 4rem);
 
     /* -----------               Spacing scale                ----------- */
 
-    --space-xs: 0.1rem;
+   --space-xs: 0.25rem;
     --space-sm: 0.5rem;
     --space-md: 1rem;
-    --space-lg: 2rem;
-    --space-xl: 3rem;
-    --space-2xl: 4rem;
+    --space-lg: clamp(1.25rem, 1rem + 1.1vw, 2rem);
+    --space-xl: clamp(2rem, 1.5rem + 2.2vw, 3rem);
+    --space-2xl: clamp(2.5rem, 1.7rem + 3.5vw, 4rem);
 }
 
 /*#########################################################################
@@ -36,14 +36,24 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+    /* anchor targets must clear the fixed header */
+    scroll-padding-top: calc(var(--header-height) + var(--space-md));
+    /* stop iOS/Android from inflating text in landscape */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
 body {
-    margin: 0;
+   margin: 0;
+    min-height: 100svh;
     font-family: var(--font-sans);
     color: var(--color-text);
-    background: var(--color-background);
-    /* line-height: 1.6; */
-    -webkit-font-smoothing: antialiased;
     background: var(--color-cardBackground);
+    -webkit-font-smoothing: antialiased;
+    /* safety net: nothing may cause a horizontal scrollbar */
+    overflow-x: clip;
 }
 
 h1,
@@ -52,8 +62,13 @@ h3 {
     font-family: var(--font-Boldonse);
     font-weight: 400;
     /* Boldonse is a single-weight font (400) */
+    /* long French words must never push the layout sideways */
+    overflow-wrap: break-word;
+    text-wrap: balance;
 }
-
+p {
+    text-wrap: pretty;
+}
 h1,
 h2,
 h3,
@@ -71,11 +86,21 @@ svg {
     height: auto;
 }
 
+input,
+textarea,
+select,
+button {
+    font: inherit;
+    font-size: max(1rem, 16px);
+    max-width: 100%;
+}
+
 /*#########################################################################
 ####################               LAYOUT              ####################
 #########################################################################*/
 
 .container {
+    width: 100%;
     max-width: 72rem;
     margin-inline: auto;
     padding-inline: var(--space-md);
@@ -94,4 +119,20 @@ svg {
 :focus-visible {
     outline: 3px solid var(--color-primary);
     outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
