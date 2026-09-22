@@ -182,6 +182,9 @@ flex: 0 0 auto;
     backdrop-filter: blur(4px);
     padding: var(--space-lg);
     overflow: hidden;
+    /* laisse le navigateur gérer le vertical, nous gardons l'horizontal (swipe) */
+    touch-action: pan-y;
+    overscroll-behavior-x: none;
 }
 
 .lightboxClose {

@@ -6,6 +6,7 @@ import styles from "./Carrousel.module.css";
 
 export default function Carrousel() {
     const scrollerRef = useRef<HTMLUListElement>(null);
+    const touchStartXRef = useRef<number | null>(null);
     const closeButtonRef = useRef<HTMLButtonElement>(null);
     const [atStart, setAtStart] = useState(true);
     const [atEnd, setAtEnd] = useState(false);
@@ -118,6 +119,17 @@ export default function Carrousel() {
                     aria-label={caroussel.title}
                     onClick={(e) => {
                         if (e.target === e.currentTarget) setOpenIndex(null);
+                    }}
+                    onTouchStart={(e) => {
+                        touchStartXRef.current = e.touches[0].clientX;
+                    }}
+                    onTouchEnd={(e) => {
+                        if (touchStartXRef.current === null) return;
+                        const delta = e.changedTouches[0].clientX - touchStartXRef.current;
+                        touchStartXRef.current = null;
+                        if (Math.abs(delta) < 48) return;
+                        if (delta < 0) setOpenIndex((openIndex + 1) % count);
+                        else setOpenIndex((openIndex - 1 + count) % count);
                     }}
                 >
                     <button
