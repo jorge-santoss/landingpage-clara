@@ -133,6 +133,10 @@
        -- without overflowing into the next section */
     .content {
         flex: 1 1 auto;
+        align-self: stretch;
+        width: 100%;
+        max-width: 40rem;
+        margin-inline: auto;
     }
 
     .subtitle {
