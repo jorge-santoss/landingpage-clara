@@ -45,6 +45,8 @@ html {
     scroll-behavior: smooth;
     /* anchor targets must clear the fixed header */
     scroll-padding-top: calc(var(--header-height) + var(--space-md));
+    /* no horizontal panning on phones, whatever wraps wider than the viewport */
+    overflow-x: clip;
     /* stop iOS/Android from inflating text in landscape */
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
@@ -59,6 +61,15 @@ body {
     -webkit-font-smoothing: antialiased;
     /* safety net: nothing may cause a horizontal scrollbar */
     overflow-x: clip;
+}
+
+/* Browsers without the `clip` keyword (older WebView / iOS) must get the
+   same guarantee via `hidden`. */
+@supports not (overflow: clip) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
 }
 
 h1,
