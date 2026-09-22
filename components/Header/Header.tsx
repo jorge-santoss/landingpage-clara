@@ -49,14 +49,15 @@ export default function Header() {
               Les formules
             </a>
           </li>
-          <li>
-            <a href="#faq" onClick={() => setOpen(false)}>
-              FAQ
-            </a>
-          </li>
+          
           <li>
             <a href="#contact" onClick={() => setOpen(false)}>
               Contact
+            </a>
+          </li>
+          <li>
+            <a href="#faq" onClick={() => setOpen(false)}>
+              FAQ
             </a>
           </li>
         </ul>
