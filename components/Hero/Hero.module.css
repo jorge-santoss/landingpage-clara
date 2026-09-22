@@ -128,7 +128,15 @@
         /* tune: title position on mobile */
     }
 
+    /* the content grows to fill the hero's inner height exactly:
+       title near the top, subtitle + buttons pinned to the bottom
+       -- without overflowing into the next section */
+    .content {
+        flex: 1 1 auto;
+    }
+
     .subtitle {
+        margin-top: auto;
         font-weight: 500;
     }
 
@@ -136,7 +144,6 @@
         flex-direction: column;
         width: 100%;
         /* buttons stack full-width */
-        margin-block-start: var(--space-md);
     }
 
     .cta,
