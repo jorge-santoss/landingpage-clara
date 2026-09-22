@@ -110,7 +110,7 @@
     border: 2px solid var(--color-primary-hover);
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 64rem) {
     .hero {
         background: url("/images/clara-heropage.png") center/cover no-repeat;
         aspect-ratio: 16 / 9;
