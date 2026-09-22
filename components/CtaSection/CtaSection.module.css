@@ -73,22 +73,52 @@
         font-weight: 600;
         text-align: center;
         margin-block-end: var(--space-md);
+        margin-block-start: var(--space-lg);
     }
 
     .icons {
-        width: 100%;                  
-        flex-wrap: wrap;
-        gap: var(--space-md);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "phone phone"
+            "address email";
+        justify-items: center;
+        align-items: start;
+        gap: var(--space-md) var(--space-lg);
+        width: 100%;
+        max-width: 40rem;
+        margin-inline: auto;
+        margin-block-end: var(--space-lg);
         padding: 0;
-        align-items: flex-start;
+        text-align: center;
+    }
+
+    .icons_svg {
+        margin: 0;
+    }
+
+    .icons_svg:nth-child(1) {
+        grid-area: phone;
+    }
+
+    .icons_svg:nth-child(2) {
+        grid-area: email;
+    }
+
+    .icons_svg:nth-child(3) {
+        grid-area: address;
     }
 
     .icons_svg svg {
-        width: 38px;                  
-        height: 38px;
+        width: 32px;
+        height: 32px;
     }
 
     .icons_text {
-        font-size: var(--text-sm);    
+        font-size: var(--text-sm);
+    }
+
+    .icons_text p {
+        overflow-wrap: anywhere;
     }
 }
