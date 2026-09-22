@@ -126,6 +126,8 @@
         justify-content: flex-start;
         padding-top: 5rem;
         /* tune: title position on mobile */
+        /* cross-axis: centre the title/subtitle/buttons on the photo */
+        align-items: center;
     }
 
     /* the content grows to fill the hero's inner height exactly:
@@ -133,15 +135,14 @@
        -- without overflowing into the next section */
     .content {
         flex: 1 1 auto;
-        align-self: stretch;
         width: 100%;
         max-width: 40rem;
-        margin-inline: auto;
     }
 
     .subtitle {
         margin-top: auto;
         font-weight: 500;
+        max-width: 100%;
     }
 
     .buttons {
