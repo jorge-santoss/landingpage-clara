@@ -18,7 +18,7 @@ export default function Solution() {
     ))}
 </ul>
                     <p className={styles.itemPrice}>{item.price}</p>
-                    < a href="#cta" className={styles.itemButton}>{item.ctaLabel}</a>
+                    < a href="#contact" className={styles.itemButton}>{item.ctaLabel}</a>
                         </li>
                 ))}
             </ul>

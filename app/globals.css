@@ -55,7 +55,7 @@ body {
     min-height: 100svh;
     font-family: var(--font-sans);
     color: var(--color-text);
-    background: var(--color-cardBackground);
+    background: var(--color-background);
     -webkit-font-smoothing: antialiased;
     /* safety net: nothing may cause a horizontal scrollbar */
     overflow-x: clip;

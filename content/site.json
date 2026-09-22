@@ -18,7 +18,7 @@
   },
   "hero": {
     "title": "L'Atelier de Clara",
-    "subtitle": "Là où les moments deviennent des œuvres d’art..",
+    "subtitle": "Là où les moments deviennent des œuvres d’art.",
     "ctaLabel": "Demander un devis",
     "ctaLabel2": "Découvrir mon portfolio"
   },
@@ -109,7 +109,7 @@
         "name": "ÉVÉNEMENT",
         "description": "Anniversaire, baptême, soirée privée ou événement professionnel : je raconte votre événement au fil des moments importants.",
          "inclus": [
-            "À partir de 2 heures de présencee",
+            "À partir de 2 heures de présence",
             "Photographies prises sur le vif",
             "Sélection et retouche des images",
             "Galerie privée en ligne",
@@ -122,7 +122,7 @@
         "name": "MARIAGE",
         "description": "Une journée inoubliable capturée avec authenticité : des préparatifs aux moments forts, je raconte votre histoire avec des images naturelles, élégantes et pleines d’émotion.",
         "inclus": [
-            "À partir de 6 heures de présencee",
+            "À partir de 6 heures de présence",
             "Reportage complet : préparatifs, cérémonie, couple, invités, détails",
             "Accompagnement avant le jour J (planning, conseils, repérage)",
             "Sélection et retouche professionnelle des images",
@@ -180,7 +180,7 @@
       },
       {
         "question": "Est-ce que vous faites des séances en intérieur ?",
-        "answer": "Oui. Une séance peut être réalisée chez vous, dans un studio partenaire ou dans un autre lieu adapté à votre projet.."
+        "answer": "Oui. Une séance peut être réalisée chez vous, dans un studio partenaire ou dans un autre lieu adapté à votre projet."
       },
       {
         "question": "Je ne suis pas à l’aise devant l’objectif. Est-ce un problème ?",

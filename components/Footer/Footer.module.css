@@ -277,11 +277,30 @@
   opacity: 0.7;
 }
 
+.consent {
+  margin-top: var(--space-sm);
+  text-align: center;
+}
+
+.consent button {
+  font-size: var(--text-xs);
+  color: var(--color-background);
+  opacity: 0.7;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.consent button:hover {
+  opacity: 1;
+}
+
 /* Focus ring must stay visible on the dark footer */
 .navCol a:focus-visible,
 .legalCol a:focus-visible,
 .emailInput:focus-visible,
-.submitBtn:focus-visible {
+.submitBtn:focus-visible,
+.consent button:focus-visible {
   outline-color: var(--color-background);
 }
 

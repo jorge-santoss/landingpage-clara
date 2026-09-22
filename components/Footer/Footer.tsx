@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { site } from "@/content/site";
+import ManageConsentButton from "@/components/ManageConsentButton/ManageConsentButton";
 import styles from "./Footer.module.css";
 
 const socialIcons: Record<string, ReactNode> = {
@@ -121,6 +122,11 @@ export default function Footer() {
                 <p className={styles.copyright}>
                     © {new Date().getFullYear()} {site.footer.companyName} — Tous droits réservés
                 </p>
+
+                {/* Gestion des cookies */}
+                <div className={styles.consent}>
+                    <ManageConsentButton />
+                </div>
 
             </div>
         </footer>

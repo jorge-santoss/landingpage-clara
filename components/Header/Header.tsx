@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <nav
-        className={`${styles.nav} container container--narrow`}
+        className={`${styles.nav} container container--narrow${open ? ` ${styles.navOpen}` : ""}`}
         aria-label="Navigation principale"
       >
         <a className={styles.brand} href="#hero">

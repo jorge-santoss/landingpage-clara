@@ -22,6 +22,13 @@
     padding-block: var(--space-sm);
 }
 
+/* Open menu: opaque panel so the links stay readable over the hero photo */
+.navOpen {
+    background: color-mix(in srgb, var(--color-background) 92%, transparent);
+    border-radius: 0 0 1rem 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
 .brand {
     display: flex;
     align-items: center;
@@ -132,7 +139,7 @@
    The floating pill nav with inline links.
    ===================================================================== */
 
-@media (min-width: 64.0625rem) {
+@media (min-width: 64rem) {
 
     .header {
         top: 1rem;
@@ -200,7 +207,7 @@
         font-weight: 600;
     }
 
-    @media (min-width: 64.0625rem) {
+@media (min-width: 64rem) {
         .links a:hover {
             background: var(--color-background);
             color: var(--color-primary);

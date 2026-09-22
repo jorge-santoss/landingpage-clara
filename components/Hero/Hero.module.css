@@ -18,6 +18,27 @@
     gap: var(--space-md);
     /* padding: var(--space-xl) var(--space-xl); */
     padding-bottom: var(--space-lg);
+    position: relative;
+}
+
+/* Light scrim: keeps the dark titles readable over the photo */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.5),
+        rgba(255, 255, 255, 0) 32%,
+        rgba(255, 255, 255, 0) 68%,
+        rgba(255, 255, 255, 0.5)
+    );
+    pointer-events: none;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 1;
 }
 
 .content {
@@ -99,7 +120,7 @@
 }
 
 
-@media (max-width: 47.9375rem) {
+@media (max-width: 48rem) {
     .hero {
         padding-inline: var(--space-lg);
         justify-content: flex-start;
