@@ -1,16 +1,9 @@
-/* ============================================================
-   Mobile-first. The burger menu is used up to 64rem (1024px)
-   so that tablets in portrait (iPad Air 820px, iPad Pro 1024px)
-   get the compact nav instead of a cramped desktop pill.
-   ============================================================ */
-
 .header {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 10;
-    /* clear the notch / dynamic island on iPhone */
     padding-top: env(safe-area-inset-top, 0px);
 }
 
@@ -135,11 +128,11 @@
 }
 
 /* =====================================================================
-   >= 64rem (1024px) : laptops, desktops, tablets in landscape
+   > 64rem (>1024px) : laptops, desktops, tablets in landscape
    The floating pill nav with inline links.
    ===================================================================== */
 
-@media (min-width: 64rem) {
+@media (min-width: 64.0625rem) {
 
     .header {
         top: 1rem;
@@ -207,7 +200,7 @@
         font-weight: 600;
     }
 
-    @media (min-width: 64rem) {
+    @media (min-width: 64.0625rem) {
         .links a:hover {
             background: var(--color-background);
             color: var(--color-primary);

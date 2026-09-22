@@ -1,7 +1,3 @@
-/* =====================================================================
-   Footer — clean column grid
-   ===================================================================== */
-
 .footer {
   width: 100%;
   box-sizing: border-box;
@@ -10,23 +6,22 @@
   color: var(--color-background);
 }
 
-/* ---------------------------------------------------------------------
-   Top row : brand | nav | legal | newsletter  (4 columns)
-   --------------------------------------------------------------------- */
-
 .topRow {
   display: grid;
   grid-template-columns:
-    minmax(220px, 1.4fr)   /* brand */
-    minmax(120px, 0.7fr)   /* nav */
-    minmax(150px, 0.9fr)   /* legal */
-    minmax(280px, 1.4fr);  /* newsletter */
+    minmax(220px, 1.4fr)
+    /* brand */
+    minmax(120px, 0.7fr)
+    /* nav */
+    minmax(150px, 0.9fr)
+    /* legal */
+    minmax(280px, 1.4fr);
+  /* newsletter */
   gap: var(--space-2xl) var(--space-xl);
   align-items: start;
   width: 100%;
   padding-bottom: clamp(2rem, 4vw, 3rem);
-  border-bottom: 1px solid
-    color-mix(in srgb, var(--color-background) 18%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--color-background) 18%, transparent);
 }
 
 /* --- Brand column ----------------------------------------------------- */
@@ -108,7 +103,8 @@
   font-size: var(--text-base);
   font-weight: 600;
   opacity: 0.85;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: break-word;
   transition: opacity 0.25s ease-in-out, color 0.25s ease-in-out;
 }
 
@@ -148,8 +144,7 @@
   gap: var(--space-xs);
   padding: 0.35rem;
   border-radius: 999px;
-  border: 1px solid
-    color-mix(in srgb, var(--color-background) 35%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-background) 35%, transparent);
   background-color: color-mix(in srgb, var(--color-background) 10%, transparent);
   transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out,
     box-shadow 0.3s ease-in-out;
@@ -158,8 +153,7 @@
 .newsletterForm:focus-within {
   border-color: var(--color-background);
   background-color: color-mix(in srgb, var(--color-background) 16%, transparent);
-  box-shadow: 0 0 0 4px
-    color-mix(in srgb, var(--color-background) 18%, transparent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-background) 18%, transparent);
 }
 
 .emailInput {
@@ -194,6 +188,7 @@
   min-height: var(--tap-target);
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
+
 
 /* ---------------------------------------------------------------------
    Big title
@@ -300,6 +295,7 @@
    --------------------------------------------------------------------- */
 
 @media (hover: hover) {
+
   .navCol a:hover,
   .legalCol a:hover {
     opacity: 1;
@@ -444,8 +440,7 @@
     text-align: left;
     background-color: transparent;
     color: var(--color-background);
-    border: 2px solid
-      color-mix(in srgb, var(--color-background) 45%, transparent);
+    border: 2px solid color-mix(in srgb, var(--color-background) 45%, transparent);
     border-radius: 999px;
   }
 

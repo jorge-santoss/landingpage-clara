@@ -24,13 +24,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--space-md);
+    gap: var(--space-xs);
     text-align: center;
     max-width: 40rem;
 }
 
 .title {
-    font-size: clamp(2.5rem, 7vw, 6.5rem);
+    font-size: clamp(1.5rem, 7vw, 6.5rem);
     line-height: 1.15;
     color: var(--color-primary);
     /* letter-spacing: -0.02em; */
@@ -98,17 +98,18 @@
 
 }
 
-@media (max-width: 48rem) {
+
+@media (max-width: 47.9375rem) {
     .hero {
         padding-inline: var(--space-lg);
         justify-content: flex-start;
-        padding-top: 8rem;
+        padding-top: 5rem;
         /* tune: title position on mobile */
         padding-bottom: var(--space-xs);
     }
 
     .content {
-        min-height: 95%;
+        min-height: 98%;
     }
 
     .subtitle {

@@ -36,7 +36,8 @@
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    width: 40rem;
+    width: 100%;
+    max-width: 40rem;
     padding: 1rem;
     align-items: flex-start;
 }
@@ -57,25 +58,25 @@
 
 @media (max-width: 48rem) {
     .title {
-        font-size: var(--text-2xl);   /* 4rem → 2.25rem */
+        font-size: var(--text-2xl);   
         text-align: center;
     }
 
     .intro {
-        font-size: var(--text-base);  /* 1.75rem → 1rem */
+        font-size: var(--text-base);  
         text-align: center;
         margin-block-end: var(--space-md);
     }
 
     .form_text {
-        font-size: var(--text-lg);  /* 1.75rem → 1rem */
+        font-size: var(--text-lg);  
         font-weight: 600;
         text-align: center;
         margin-block-end: var(--space-md);
     }
 
     .icons {
-        width: 100%;                  /* 40rem → full width */
+        width: 100%;                  
         flex-wrap: wrap;
         gap: var(--space-md);
         padding: 0;
@@ -83,11 +84,11 @@
     }
 
     .icons_svg svg {
-        width: 38px;                  /* 70px → 48px */
+        width: 38px;                  
         height: 38px;
     }
 
     .icons_text {
-        font-size: var(--text-sm);    /* reads nicely under the smaller icons */
+        font-size: var(--text-sm);    
     }
 }
