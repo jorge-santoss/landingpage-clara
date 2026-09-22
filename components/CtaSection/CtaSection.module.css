@@ -73,7 +73,8 @@
         font-weight: 600;
         text-align: center;
         margin-block-end: var(--space-md);
-        margin-block-start: var(--space-lg);
+        /* ne colle plus au bloc d'icônes au-dessus */
+        margin-block-start: var(--space-md);
     }
 
     .icons {
