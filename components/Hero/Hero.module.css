@@ -122,21 +122,30 @@
 
 @media (max-width: 48rem) {
     .hero {
+        box-sizing: border-box;
+        width: 100%;
         padding-inline: var(--space-lg);
         justify-content: flex-start;
+        align-items: center;
+        text-align: center;
         padding-top: 5rem;
         /* tune: title position on mobile */
-        /* cross-axis: centre the title/subtitle/buttons on the photo */
-        align-items: center;
     }
 
     /* the content grows to fill the hero's inner height exactly:
        title near the top, subtitle + buttons pinned to the bottom
        -- without overflowing into the next section */
     .content {
+        box-sizing: border-box;
         flex: 1 1 auto;
         width: 100%;
         max-width: 40rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .title {
+        max-width: 100%;
     }
 
     .subtitle {
@@ -148,6 +157,7 @@
     .buttons {
         flex-direction: column;
         width: 100%;
+        max-width: 100%;
         /* buttons stack full-width */
     }
 
@@ -156,5 +166,6 @@
         text-align: center;
         /* keep them centered */
         width: 100%;
+        max-width: 100%;
     }
 }
