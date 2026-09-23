@@ -4,7 +4,7 @@ export type Testimonial = {
     role: string;
 }
 
-export type SolutionItem = {
+export type FormuleItem = {
     name: string;
     description: string;
     inclus: string[];
@@ -61,11 +61,11 @@ export type SiteContent = {
     };
 
     
-   solution: {
+   formule: {
         title: string;
         subtitle: string;
         introduction: string;
-        categories: SolutionItem[];
+        categories: FormuleItem[];
     };
 
     socialProof: {

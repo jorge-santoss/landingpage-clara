@@ -56,8 +56,8 @@ collections:
                 widget: list
                 field: { name: item, label: "Point", widget: string }
 
-          - name: solution
-            label: "Section Solution"
+          - name: formule
+            label: "Section Formule"
             widget: object
             fields:
               - { name: title, label: "Titre", widget: string }

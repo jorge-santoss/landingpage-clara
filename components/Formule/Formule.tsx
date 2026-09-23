@@ -1,14 +1,14 @@
 import {site} from "@/content/site";
-import styles from "./Solution.module.css";
+import styles from "./Formule.module.css";
 
-export default function Solution() {
+export default function Formule() {
     return (
-        <section className={`${styles.solution} container container--wide`} id="solution" aria-labelledby="solution-title">
-            <h2 className={styles.title} id="solution-title">{site.solution.title}</h2>
-            <p className={styles.subtitle}>{site.solution.subtitle}</p>
-            <p className={styles.introduction}>{site.solution.introduction}</p>
+        <section className={`${styles.formule} container container--wide`} id="formule" aria-labelledby="formule-title">
+            <h2 className={styles.title} id="formule-title">{site.formule.title}</h2>
+            <p className={styles.subtitle}>{site.formule.subtitle}</p>
+            <p className={styles.introduction}>{site.formule.introduction}</p>
             <ul className={styles.items} role="list">
-                {site.solution.categories.map((item) => (
+                {site.formule.categories.map((item) => (
                     <li className={styles.item} key={item.name}>
                     <h3 className={styles.itemTitle}>{item.name}</h3>
                     <p className={styles.itemDescription}>{item.description}</p>

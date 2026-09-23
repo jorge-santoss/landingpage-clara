@@ -45,7 +45,7 @@ export default function Header() {
             </a>
           </li>
           <li>
-            <a href="#solution" onClick={() => setOpen(false)}>
+            <a href="#formule" onClick={() => setOpen(false)}>
               Les formules
             </a>
           </li>

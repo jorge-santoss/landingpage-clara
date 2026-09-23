@@ -61,7 +61,7 @@
       "MARIAGE"
     ]
   },
-  "solution": {
+  "formule": {
     "title": "LES FORMULES",
     "subtitle": "Une séance pensée pour chaque histoire.",
     "introduction": "Chaque projet est différent. Je propose plusieurs formules pour répondre à vos envies, avec la possibilité de créer une prestation personnalisée.",
@@ -217,7 +217,7 @@
     "navLinks": [
       { "label": "Portfolio", "href": "#portfolio" },
       { "label": "À propos", "href": "#presentation" },
-      { "label": "Prestations", "href": "#solution" },
+      { "label": "Prestations", "href": "#formule" },
       { "label": "FAQ", "href": "#faq" },
       { "label": "Contact", "href": "#contact" }
     ],
@@ -232,7 +232,7 @@
     "newsletterPlaceholder": "you@example.com",
     "newsletterSubmit": "Envoyer",
     "bigTitle": "L'atelier de Clara",
-    "socialText": "Follow me",
+    "socialText": "Suivez-moi",
     "social": [
       { "label": "Instagram", "href": "#" },
       { "label": "Facebook", "href": "#" },
